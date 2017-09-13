@@ -1,0 +1,10 @@
+/Users/mikekeehnen/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.deps.json
+/Users/mikekeehnen/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.runtimeconfig.json
+/Users/mikekeehnen/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.runtimeconfig.dev.json
+/Users/mikekeehnen/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.dll
+/Users/mikekeehnen/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.pdb
+/Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.csproj.CoreCompileInputs.cache
+/Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.AssemblyInfoInputs.cache
+/Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.AssemblyInfo.cs
+/Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.dll
+/Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.pdb
