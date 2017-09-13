@@ -8,3 +8,13 @@
 /Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.AssemblyInfo.cs
 /Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.dll
 /Users/mikekeehnen/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.pdb
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.deps.json
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.runtimeconfig.json
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.runtimeconfig.dev.json
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.dll
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/bin/Debug/netcoreapp2.0/mvcTest.pdb
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.csproj.CoreCompileInputs.cache
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.AssemblyInfoInputs.cache
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.AssemblyInfo.cs
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.dll
+/Users/mikekeehnen/Documents/Project-5-6/mvcTest/obj/Debug/netcoreapp2.0/mvcTest.pdb

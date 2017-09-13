@@ -3,7 +3,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/mikekeehnen/mvcTest/obj/project.assets.json</ProjectAssetsFile>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/mikekeehnen/Documents/Project-5-6/mvcTest/obj/project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/mikekeehnen/.nuget/packages/</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/mikekeehnen/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
