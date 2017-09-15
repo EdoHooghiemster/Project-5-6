@@ -12533,28 +12533,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/mikekeehnen/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Edo Hooghiemster\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mikekeehnen/Documents/Project-5-6/mvcTest/mvcTest.csproj",
+      "projectUniqueName": "c:\\Users\\Edo Hooghiemster\\Pictures\\Project-5-6\\mvcTest\\mvcTest.csproj",
       "projectName": "mvcTest",
-      "projectPath": "/Users/mikekeehnen/Documents/Project-5-6/mvcTest/mvcTest.csproj",
-      "packagesPath": "/Users/mikekeehnen/.nuget/packages/",
-      "outputPath": "/Users/mikekeehnen/Documents/Project-5-6/mvcTest/obj/",
+      "projectPath": "c:\\Users\\Edo Hooghiemster\\Pictures\\Project-5-6\\mvcTest\\mvcTest.csproj",
+      "packagesPath": "C:\\Users\\Edo Hooghiemster\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Edo Hooghiemster\\Pictures\\Project-5-6\\mvcTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/mikekeehnen/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Edo Hooghiemster\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
