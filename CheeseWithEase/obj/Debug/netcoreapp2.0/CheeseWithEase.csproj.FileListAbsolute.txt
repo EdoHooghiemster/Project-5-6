@@ -9,16 +9,16 @@
 /Users/mikekeehnen/CheeseWithEase/obj/Debug/netcoreapp2.0/CheeseWithEase.dll
 /Users/mikekeehnen/CheeseWithEase/obj/Debug/netcoreapp2.0/CheeseWithEase.pdb
 <<<<<<< HEAD
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\bin\Debug\netcoreapp2.0\CheeseWithEase.deps.json
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\bin\Debug\netcoreapp2.0\CheeseWithEase.runtimeconfig.json
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\bin\Debug\netcoreapp2.0\CheeseWithEase.runtimeconfig.dev.json
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\bin\Debug\netcoreapp2.0\CheeseWithEase.dll
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\bin\Debug\netcoreapp2.0\CheeseWithEase.pdb
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\obj\Debug\netcoreapp2.0\CheeseWithEase.csproj.CoreCompileInputs.cache
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\obj\Debug\netcoreapp2.0\CheeseWithEase.AssemblyInfoInputs.cache
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\obj\Debug\netcoreapp2.0\CheeseWithEase.AssemblyInfo.cs
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\obj\Debug\netcoreapp2.0\CheeseWithEase.dll
-c:\Users\Edo Hooghiemster\Pictures\Project-5-6\CheeseWithEase\obj\Debug\netcoreapp2.0\CheeseWithEase.pdb
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/bin/Debug/netcoreapp2.0/CheeseWithEase.deps.json
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/bin/Debug/netcoreapp2.0/CheeseWithEase.runtimeconfig.json
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/bin/Debug/netcoreapp2.0/CheeseWithEase.runtimeconfig.dev.json
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/bin/Debug/netcoreapp2.0/CheeseWithEase.dll
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/bin/Debug/netcoreapp2.0/CheeseWithEase.pdb
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/obj/Debug/netcoreapp2.0/CheeseWithEase.csproj.CoreCompileInputs.cache
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/obj/Debug/netcoreapp2.0/CheeseWithEase.AssemblyInfoInputs.cache
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/obj/Debug/netcoreapp2.0/CheeseWithEase.AssemblyInfo.cs
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/obj/Debug/netcoreapp2.0/CheeseWithEase.dll
+c:/Users/Edo Hooghiemster/Pictures/Project-5-6/CheeseWithEase/obj/Debug/netcoreapp2.0/CheeseWithEase.pdb
 =======
 /Users/mikekeehnen/Documents/Project-5-6/CheeseWithEase/bin/Debug/netcoreapp2.0/CheeseWithEase.deps.json
 /Users/mikekeehnen/Documents/Project-5-6/CheeseWithEase/bin/Debug/netcoreapp2.0/CheeseWithEase.runtimeconfig.json

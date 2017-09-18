@@ -12533,38 +12533,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Edo Hooghiemster\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/mikekeehnen/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "c:\\Users\\Edo Hooghiemster\\Pictures\\Project-5-6\\CheeseWithEase\\CheeseWithEase.csproj",
-      "projectName": "CheeseWithEase",
-      "projectPath": "c:\\Users\\Edo Hooghiemster\\Pictures\\Project-5-6\\CheeseWithEase\\CheeseWithEase.csproj",
-      "packagesPath": "C:\\Users\\Edo Hooghiemster\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Edo Hooghiemster\\Pictures\\Project-5-6\\CheeseWithEase\\obj\\",
-=======
       "projectUniqueName": "/Users/mikekeehnen/Documents/Project-5-6/CheeseWithEase/CheeseWithEase.csproj",
       "projectName": "CheeseWithEase",
       "projectPath": "/Users/mikekeehnen/Documents/Project-5-6/CheeseWithEase/CheeseWithEase.csproj",
       "packagesPath": "/Users/mikekeehnen/.nuget/packages/",
       "outputPath": "/Users/mikekeehnen/Documents/Project-5-6/CheeseWithEase/obj/",
->>>>>>> 4278a856a925b1378a954083f60e4adf98344845
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Edo Hooghiemster\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/mikekeehnen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12598,5 +12588,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/mikekeehnen/Documents/Project-5-6/CheeseWithEase/obj/CheeseWithEase.csproj.nuget.cache : Found invalid data while decoding."
+    }
+  ]
 }
