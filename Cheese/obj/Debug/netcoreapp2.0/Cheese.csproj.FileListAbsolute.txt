@@ -1,0 +1,10 @@
+/Users/mikekeehnen/Cheese/bin/Debug/netcoreapp2.0/Cheese.deps.json
+/Users/mikekeehnen/Cheese/bin/Debug/netcoreapp2.0/Cheese.runtimeconfig.json
+/Users/mikekeehnen/Cheese/bin/Debug/netcoreapp2.0/Cheese.runtimeconfig.dev.json
+/Users/mikekeehnen/Cheese/bin/Debug/netcoreapp2.0/Cheese.dll
+/Users/mikekeehnen/Cheese/bin/Debug/netcoreapp2.0/Cheese.pdb
+/Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.csproj.CoreCompileInputs.cache
+/Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.AssemblyInfoInputs.cache
+/Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.AssemblyInfo.cs
+/Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.dll
+/Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.pdb
