@@ -29,9 +29,58 @@ namespace CheeseWithEase.Controllers
             return View();
         }
 
+        public IActionResult Land()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Type()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Aanbiedingen()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Kaasfondue()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Kaasgereedschap()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Kaaspakketten()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Lekker_bij_de_kaas()
+        {
+            
+
+            return View();
+        }
+
         public IActionResult Error()
         {
-            return view();
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
