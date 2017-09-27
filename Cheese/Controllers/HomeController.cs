@@ -15,20 +15,72 @@ namespace Cheese.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Land()
         {
-            ViewData["Message"] = "Your application description page.";
+         
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Type()
         {
-            ViewData["Message"] = "Your contact page.";
+
+
+            return View();
+        }
+        public IActionResult Aanbiedingen()
+        {
+     
 
             return View();
         }
 
+        public IActionResult Kaasfondue()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Kaasgereedschap()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Lekker_bij_de_kaas()
+        {
+            
+
+            return View();
+        }
+
+         public IActionResult Kaaspakketten()
+        {
+            
+
+            return View();
+        }
+         public IActionResult About()
+        {
+            
+
+            return View();
+        }
+
+        public IActionResult Klantservice()
+        {
+            
+
+            return View();
+        }
+         public IActionResult Contact_Informatie()
+        {
+            
+
+            return View();
+        }
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
