@@ -28,3 +28,13 @@ C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Chees
 C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyInfo.cs
 C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.dll
 C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.pdb
+D:\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.deps.json
+D:\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.runtimeconfig.json
+D:\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.runtimeconfig.dev.json
+D:\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.dll
+D:\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.pdb
+D:\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.csproj.CoreCompileInputs.cache
+D:\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyInfoInputs.cache
+D:\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyInfo.cs
+D:\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.dll
+D:\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.pdb

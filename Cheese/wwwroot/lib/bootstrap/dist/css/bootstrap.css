@@ -4,6 +4,56 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+h4{
+  font-weight: 600;
+}
+p{
+font-size: 12px;
+margin-top: 5px;
+}
+.price{
+font-size: 30px;
+  margin: 0 auto;
+  color: #333;
+}
+.right{
+float:right;
+border-bottom: 2px solid #4B8E4B;
+}
+div.relative {
+  position: relative;
+  left: 3%;
+  top: 50px;
+  
+}
+
+div.relativer {
+  position: relative;
+  left: -16.5%;
+  top: 250px;
+  
+}
+.thumbnail{
+opacity:0.70;
+-webkit-transition: all 0.5s; 
+transition: all 0.5s;
+position: relative;
+right: 5%;
+}
+.thumbnail:hover{
+opacity:1.00;
+box-shadow: 0px 0px 10px #4bc6ff;
+}
+.line{
+margin-bottom: 5px;
+
+}
+@media screen and (max-width: 770px) {
+.right{
+  float:left;
+  width: 100%;
+}
+}
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -1122,7 +1172,7 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 300px;
 }
 .img-rounded {
   border-radius: 6px;
@@ -6236,9 +6286,11 @@ button.close {
 }
 .carousel {
   position: relative;
+ 
 }
 .carousel-inner {
   position: relative;
+  right: -25%;
   width: 100%;
   overflow: hidden;
 }
