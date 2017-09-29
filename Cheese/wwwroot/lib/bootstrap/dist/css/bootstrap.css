@@ -18,21 +18,29 @@ font-size: 30px;
 }
 .right{
 float:right;
-border-bottom: 2px solid #4B8E4B;
+border-bottom: 2px solid transparent;
+
+}
+div.relativ {
+  position: relative;
+  left: 5.5%;
+  top: -50px;
+  
 }
 div.relative {
   position: relative;
-  left: 3%;
-  top: 50px;
+  left: 43%;
+  bottom: 70px;
   
 }
 
 div.relativer {
   position: relative;
-  left: -16.5%;
-  top: 250px;
+  left: 0%;
+  top: 140px;
   
 }
+
 .thumbnail{
 opacity:0.70;
 -webkit-transition: all 0.5s; 
@@ -42,7 +50,7 @@ right: 5%;
 }
 .thumbnail:hover{
 opacity:1.00;
-box-shadow: 0px 0px 10px #4bc6ff;
+box-shadow: 0px 0px 10px rgba(75, 198, 255, 0.99);
 }
 .line{
 margin-bottom: 5px;
@@ -77,6 +85,7 @@ section,
 summary {
   display: block;
 }
+
 audio,
 canvas,
 progress,
@@ -4218,6 +4227,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+  
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4227,6 +4237,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-header {
     float: left;
+    
   }
 }
 .navbar-collapse {
@@ -4543,11 +4554,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #73E64C;
+  border-color: #E7E7E7;
+  top: 40px;
+
+  
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #777777;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -4556,6 +4570,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-text {
   color: #777;
+  right: 50%;
 }
 .navbar-default .navbar-nav > li > a {
   color: #777;
@@ -5504,9 +5519,11 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          
 }
 .panel-body {
   padding: 15px;
+ 
 }
 .panel-heading {
   padding: 10px 15px;
@@ -5516,12 +5533,14 @@ button.list-group-item-danger.active:focus {
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
+  
 }
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
   color: inherit;
+  
 }
 .panel-title > a,
 .panel-title > small,
@@ -5532,7 +5551,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-footer {
   padding: 10px 15px;
-  background-color: #f5f5f5;
+  background-color: #362FA3;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -6807,3 +6826,31 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/*
+Code snippet by maridlcrmn for Bootsnipp.com
+Follow me on Twitter @maridlcrmn
+*/
+
+.navbar-brand { position: relative; z-index: 2; }
+
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; }
+
+.navbar .navbar-collapse { position: relative; }
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%; }
+.navbar.navbar-default .nav-collapse { background-color: rgba(90, 112, 221, 0.47); }
+.navbar.navbar-inverse .nav-collapse { background-color: rgba(15, 18, 194, 0.99); }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-outline { background-color: transparent; }
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; } 
+    
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none; }
+}
