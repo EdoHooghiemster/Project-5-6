@@ -6855,3 +6855,35 @@ Follow me on Twitter @maridlcrmn
     .navbar .nav-collapse .navbar-form { margin: 0; }
     .nav-collapse>li { float: none; }
 }
+
+.about{
+  margin-right:2%;
+  width:20%;
+  float:left;
+  min-height: 200px;
+  border-right: 1px solid grey;
+}
+
+.about1{
+  margin-right: 2%;
+  width: 20%;
+  float: left;
+  min-height: 200px;
+}
+.klantenservic{
+  
+  margin-right: 2%;
+  width:40%;
+  float: left;;
+  min-height: 400px;
+  padding-right: 50px;
+  border-right: 1px solid grey;
+}
+.klantenservice1{
+  float:left;
+  width:40%;
+  min-height:400px;
+}
+.kstekst{
+  margin-left: 5%;
+}
