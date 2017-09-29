@@ -124,11 +124,36 @@
         <footer>
             <p>&copy; 2017 - Cheese</p>
         </footer>
-       
-            <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="Klantservice">Klantservice</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="Contact_Informatie">Contact Informatie</a></li>
-             
+       <div class="about">
+                <b>Over</b>
+                <p></p>
+                <p>Cheese with ease is in 2017 opgericht door the Flying corporation. Het is een webshop met een groot assortiment aan verschillende kazen en producten die betrekking hebben tot kaas.</p>
+        
+            </div>
+            <div class="about">    
+                <b>Klantservice</b>
+                <p></p>
+                <li><a asp-area="" asp-controller="Home" asp-action="About">Retourneren</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="About">Garantie</a></li>
+            </div>
+            <div class="about1">
+                <b>Contact informatie</b>
+                <p></p>
+                <p><b>Telefoon:</b>
+                            <br>
+                010-123 45 67
+                </p>
+                <p></p>
+                <p><b>E-mail:</b>
+                <br>
+                info@cheesewithease.com</p>
+                <p></p>
+                <p><b>telegram</b>
+                <br>
+                iets iets telegramadres
+                </p>
+                    
+        </div>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
