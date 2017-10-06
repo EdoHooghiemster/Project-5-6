@@ -49,3 +49,4 @@ D:\Rogier\Documenten\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyI
 D:\Rogier\Documenten\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.dll
 D:\Rogier\Documenten\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.pdb
 D:\Rogier\Documenten\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.csprojResolveAssemblyReference.cache
+D:\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.csprojResolveAssemblyReference.cache
