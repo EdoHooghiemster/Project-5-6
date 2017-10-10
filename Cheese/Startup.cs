@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Cheese.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cheese
 {
@@ -19,9 +21,14 @@ namespace Cheese
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
+        public void ConfigureServices (IServiceCollection services) {
+
+        //Add this line to your method
+            services.AddDbContext<CheeseContext> (
+                        opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=MikeGolf"));
+
+            services.AddMvc ();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

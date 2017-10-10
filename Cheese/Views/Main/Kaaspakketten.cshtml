@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "Kaaspakketten";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<html>
+<head>
+<title>Google Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container body-content">
+        <div class="row">
+        <div class="klantenservic">
+                <h3>Login</h3>
+                <span class="material-icons">email</span>
+                <input type="email" 
+                name="email" 
+                id="login_email" 
+                data-test="login-user-form-email" 
+                placeholder="E-mailadres" 
+                autocorrect="off" 
+                autocapitalize="off" 
+                class="text-input" 
+                tabindex="6" 
+                maxlength="100">
+                <p></p>
+                <i class="material-icons">vpn_key</i>
+                <input type="password" 
+                name="password" 
+                id="login_password" 
+                data-test="login-user-form-password" 
+                placeholder="Password" 
+                autocorrect="off" 
+                autocapitalize="off" 
+                class="text-input" 
+                tabindex="6" 
+                maxlength="100">
+                <p></p>
+                <input type="submit" name="submit" data-test="login-form-submit" value="Inloggen" tabindex="3">
+</div>
+<h3>Registreren</h3>    
+                <span class="material-icons">email</span>
+                <input type="email" 
+                name="emailr" 
+                id="login_email_new" 
+                data-test="login-new-user-form-email" 
+                placeholder="E-mailadres" 
+                autocorrect="off" 
+                autocapitalize="off" 
+                class="text-input" 
+                tabindex="6" 
+                maxlength="100">
+                <p></p>
+                <i class="material-icons">vpn_key</i>
+                <input type="password" 
+                name="password" 
+                id="login_password_new" 
+                data-test="login-new-user-form-password" 
+                placeholder="Password" 
+                autocorrect="off" 
+                autocapitalize="off" 
+                class="text-input" 
+                tabindex="6" 
+                maxlength="100">
+                <p></p>
+                <input type="submit" name="submit" data-test="login-new-form-submit" value="Registreren" tabindex="3">
+</div></div>
+    
+</body>
+</html>

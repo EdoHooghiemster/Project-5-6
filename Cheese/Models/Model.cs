@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace Model
+namespace Cheese.Models
 {
   public class CheeseContext : DbContext
   {
@@ -12,10 +12,9 @@ namespace Model
     public DbSet<Leverancier> Leveranciers { get; set; } 
     
     //this method is run automatically by EF the first time we run the application
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-      //here we define the name of our database
-      optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=CheeseDB;Pooling=true;");
-    }
+     public CheeseContext(DbContextOptions<CheeseContext> options): base(options)
+        {
+        }
   }
 
   public class Kaas

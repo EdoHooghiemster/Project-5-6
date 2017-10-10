@@ -1,0 +1,83 @@
+@model IEnumerable<Cheese.Models.Kaas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Admin</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Merk)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Melksoort)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Vet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Biologisch)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kaassoort)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Eetbarekorst)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Afkomst)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prijs)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Merk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Melksoort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Biologisch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kaassoort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eetbarekorst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Afkomst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prijs)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
