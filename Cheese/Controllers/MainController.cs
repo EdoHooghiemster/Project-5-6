@@ -9,7 +9,7 @@ namespace WebApplication1.Controllers
     public class MainController : Controller
     {
         // GET: Main
-        public ActionResult Index()
+        public ActionResult Klant()
         {
             return View();
         }
