@@ -53,15 +53,37 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Telnummer,Adres")] Klant klant)
+       public IActionResult Create(Klant klant)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(klant);
-                await _context.SaveChangesAsync();
+
+                if (_context.Klanten.Where(u => u.Email == klant.Email).Any())
+                {
+                    ModelState.AddModelError("Email","E-Mail al in gebruik");
+
+                }
+                else 
+                {
+                    var m = new Klant {
+                        Id = klant.Id,
+                        Voornaam = klant.Voornaam,
+                        Achternaam = klant.Achternaam,
+                        Geslacht = klant.Geslacht,
+                        Geboortedatum = klant.Geboortedatum,
+                        Email = klant.Email,
+                        Telnummer = klant.Telnummer,
+                        Adres = klant.Adres
+
+                    };
+                _context.Add(m);
+                _context.SaveChanges();
+
                 return RedirectToAction(nameof(Login));
+                }
+
             }
-            return View(klant);
+            return View();
         }
 
         // GET: Login/Edit/5
