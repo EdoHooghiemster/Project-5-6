@@ -6889,7 +6889,7 @@ Follow me on Twitter @maridlcrmn
 }
 .siteboven{
   position: relative;
-  top:-50px;
+  top:-70px;
   left:10%;
 }
 .zoekfunctie{
@@ -6897,7 +6897,7 @@ Follow me on Twitter @maridlcrmn
   top:170%;
   left: 1%;
   max-height: 100px;
-  max-width: 53%;
+  max-width: 40%;
 }
 .login{
   position:relative;
