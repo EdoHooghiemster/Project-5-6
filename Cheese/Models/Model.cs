@@ -13,8 +13,8 @@ namespace Cheese.Models
     public DbSet<Leverancier> Leveranciers { get; set; } 
     
     //this method is run automatically by EF the first time we run the application
-     public CheeseContext(DbContextOptions<CheeseContext> options): base(options)
-        {
+     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+          optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=CheeseDB;Pooling=true;");
         }
   }
 
