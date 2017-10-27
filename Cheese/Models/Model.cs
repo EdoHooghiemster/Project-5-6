@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Cheese.Models
 {
@@ -47,12 +48,20 @@ namespace Cheese.Models
   public class Klant
   {
       public int Id { get; set; }
+      [Required(ErrorMessage = "Voornaam is nodig")]
       public string Voornaam { get; set; }
+      [Required(ErrorMessage = "Achternaam is nodig")]
       public string Achternaam { get; set; }
+      [Required(ErrorMessage = "Geslacht is nodig")]
       public string Geslacht { get; set; }
+     [Required( ErrorMessage = "Geboortedatum incorrect")]
       public int Geboortedatum { get; set; }
+      [Required(ErrorMessage = "Geboortedatum is nodig")]
       public string Email { get; set; }
+     [Required(ErrorMessage = "Telefoonnummer is nodig")]
+     [StringLength(10,MinimumLength = 10, ErrorMessage = "Nummer moet 10 cijfers lang zijn")]
       public string Telnummer { get; set; }
+      [Required(ErrorMessage = "Adres is nodig")]
       public string Adres { get; set; }
       public List<Klant> Klanten { get; set; }
   }
