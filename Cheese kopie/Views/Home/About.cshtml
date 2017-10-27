@@ -1,0 +1,78 @@
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cheese</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<br>
+@{
+    ViewData["Title"] = "Klantenservice";
+}
+<h2>@ViewData["Title"]</h2>
+<body>
+    <div class="container body-content">
+           
+            <div class="row">
+                <div class="klantenservic">
+                    <h3>Retourneren</h3>
+                    <li>
+                    <b>Mag ik mijn producten retourneren?</b>
+                    </li>
+                    <div class="kstekst">
+                        <p></p>
+                        <p>U mag alle kaasgereedschappen retourneren indien u binnen 30 dagen na de aflevering contact opneemt. Etenswaren zijn niet te retourneren tenzij er een probleem is met het product en het binnen de garantie valt.</p>
+                    </div>
+                    <li>
+                    <b>Hoe retourneer ik mijn product?</b>
+                    </li>
+                    <div class="kstekst">
+                        <p></p>
+                        <p>Direct na het contact met de klantenservice krijgt u een e-mail met daarin de bestelcode die u in het pakket moet leggen en het adres waar het naar gestuurd moet worden.</p>
+                    </div>
+                    <li>
+                    <b>Moet ik betalen voor het retourneren?</b>
+                    </li>
+                    <div class="kstekst">
+                        <p></p>
+                        <p>Met betrekking tot de garantie vergoeden wij de kosten voor het retourneren maar bij normale gevallen moet u zelf betalen.</p>
+                    </div>
+                </div>
+                <div class="klantenservice1">
+                    <h3>Garantie</h3>
+                    <li>
+                    <b>Heb ik garantie op mijn product?</b>
+                    </li>
+                    <div class="kstekst">
+                        <p></p>
+                        <p>U heeft garantie op alle producten die u koopt bij cheese with ease zolang ze zijn beschadigd tijdens het bezorgen of voor de kaasgereedschappen als ze binnen de garantietermijn kapot gaan. De garantietermijn verschilt echter per product.</p>
+                    </div>
+                    <li>
+                    <b>Wat is het garantiebewijs van mijn artikel?</b>
+                    </li>
+                    <div class="kstekst">
+                        <p></p>
+                        <p>Bij de bestelling krijgt u het garantiebewijs waarop de bezorger de bezorgdatum heeft gezet. Mocht u dit niet gekregen hebben dan wordt de bevestiging van u bestelling het garantiebewijs.</p>
+                    </div>
+                    <li>
+                    <b>Wat is de garantietermijn van mijn artikel?</b>
+                    </li>
+                    <div class="kstekst">
+                        <p></p>
+                        <p>Op alle voedingsartikellen heeft u standaard een garantie van een week. In gevallen dat niet het geval is staat de garantietermijn op de pagina van het product en staat die aangegeven op uw garantiebewijs. Alle kaasgereedschappen hebben een garantie van een week.</p>
+                    </div>  
+                </div>
+                
+            </div>
+    </div>
+</body>

@@ -13,11 +13,10 @@ namespace Cheese.Models
     public DbSet<Leverancier> Leveranciers { get; set; } 
     
     //this method is run automatically by EF the first time we run the application
-     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-          optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=CheeseDB;Pooling=true;");
+    public CheeseContext(DbContextOptions<CheeseContext> options): base(options)
+        {
         }
   }
-
   public class Kaas
   {
     public int Id { get; set; }
@@ -30,6 +29,7 @@ namespace Cheese.Models
     public bool Eetbarekorst { get; set; }
     public string Afkomst { get; set; }
     public float Prijs { get; set; }
+    public string Afbeelding {get; set;}
     public List<Kaas> Kazen { get; set; }
   }
 
