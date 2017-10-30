@@ -93,3 +93,4 @@ c:/Users/Edo Hooghiemster/Documents/Echte Project 5-6/Project-5-6/Cheese/obj/Deb
 /Users/mikekeehnen/Projects/Project-5-6/Cheese kopie/obj/Debug/netcoreapp2.0/Cheese.AssemblyInfo.cs
 /Users/mikekeehnen/Projects/Project-5-6/Cheese kopie/obj/Debug/netcoreapp2.0/Cheese.dll
 /Users/mikekeehnen/Projects/Project-5-6/Cheese kopie/obj/Debug/netcoreapp2.0/Cheese.pdb
+/Users/mikekeehnen/Projects/Project-5-6/Cheese kopie/bin/Debug/netcoreapp2.0/Cheese.pdb

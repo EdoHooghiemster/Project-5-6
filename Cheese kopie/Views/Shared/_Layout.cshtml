@@ -18,7 +18,6 @@
 </head>
 <body>
     <div class="siteboven">
-        <div class="wrapper">
             <a asp-area=""  asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/logo.png" width="70%" height="400%" ></a>
             <div class="zoekfunctie">
                 <div class="input-group custom-search-form">
@@ -28,20 +27,18 @@
                     <span class="glyphicon glyphicon-search"></span>
                     </button>
                     </span>
-                </div><!-- /input-group -->
+                </div><!-- /input-group-->
             </div>
             <div class="login">
-                <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px"> Login</a>
+                <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px" > Login</a>
             </div>
             <div class="admin">
-                <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:20px"> Admin</a>
+                <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:20px" > Admin</a>
             </div>
             <div class="winkelwagen">
                 <a asp-area="" asp-controller="Home" asp-action="Winkelwagen"> <span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a>
             </div>
-        </div>
     </div>  
-        
        <!-- Second navbar for sign in -->
      
     <nav class="navbar navbar-default">
@@ -75,33 +72,35 @@
         @RenderBody()
         <hr/>
         <footer>
+            <div style="text-align:center">
             <p>&copy; 2017 - Cheese</p>
+            </div>
         </footer>
-       <div class="about">
-                <b>Over</b>
-                <p></p>
-                <p>Cheese with ease is in 2017 opgericht door the Flying corporation. Het is een webshop met een groot assortiment aan verschillende kazen en producten die betrekking hebben tot kaas.</p>
-        
-            </div>
-            <div class="about">    
-                <b>Klantservice</b>
-                <p></p>
-                <li><a asp-area="" asp-controller="Home" asp-action="About">Retourneren</a></li>
-                <li><a asp-area="" asp-controller="Home" asp-action="About">Garantie</a></li>
-            </div>
-            <div class="about1">
-                <b>Contact informatie</b>
-                <p></p>
-                <p><b>Telefoon:</b>
-                            <br>
-                010-123 45 67
-                </p>
-                <p></p>
-                <p><b>E-mail:</b>
-                <br>
-                info@cheesewithease.com</p>
+        <div class="about2">
+            <b>Over</b>
+            <p></p>
+            <p>Cheese with ease is in 2017 opgericht door the Flying corporation. Het is een webshop met een groot assortiment aan verschillende kazen en producten die betrekking hebben tot kaas.</p>
+    
+        </div>
+        <div class="about">    
+            <b>Klantservice</b>
+            <p></p>
+            <li><a asp-area="" asp-controller="Home" asp-action="About">Retourneren</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="About">Garantie</a></li>
+        </div>
+        <div class="about1">
+            <b>Contact informatie</b>
+            <p></p>
+            <p><b>Telefoon:</b>
+                        <br>
+            010-123 45 67
+            </p>
+            <p></p>
+            <p><b>E-mail:</b>
+            <br>
+            info@cheesewithease.com</p>
+            
                 
-                    
         </div>
 
     <environment include="Development">
