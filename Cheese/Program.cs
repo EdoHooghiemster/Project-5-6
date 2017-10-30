@@ -18,7 +18,7 @@ namespace Cheese
         {
             BuildWebHost(args).Run();
 
-            using (var db = new CheeseContext())
+            /*using (var db = new CheeseContext())
             {
                 Kaas k = new Kaas{
                     Id = 2,
@@ -40,7 +40,7 @@ namespace Cheese
                 //SELECT ALL CHEESE AND FILTER: ALLEEN MELKSOORT "Koe"
                 var projected_cheese = from k in db.Kazen
                         where k.Melksoort == "Koe"
-                        select k;
+                        select k;*/
             
         }
         public static IWebHost BuildWebHost(string[] args) =>

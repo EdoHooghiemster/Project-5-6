@@ -8,16 +8,6 @@
 /Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.AssemblyInfo.cs
 /Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.dll
 /Users/mikekeehnen/Cheese/obj/Debug/netcoreapp2.0/Cheese.pdb
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.deps.json
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.runtimeconfig.json
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.runtimeconfig.dev.json
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.dll
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.pdb
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.csproj.CoreCompileInputs.cache
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.AssemblyInfoInputs.cache
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.AssemblyInfo.cs
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.dll
-C:/Users/marti/Documents/GitHub/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.pdb
 D:/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.deps.json
 D:/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.runtimeconfig.json
 D:/Project-5-6/Cheese/bin/Debug/netcoreapp2.0/Cheese.runtimeconfig.dev.json
@@ -83,3 +73,14 @@ c:/Users/Edo Hooghiemster/Documents/Echte Project 5-6/Project-5-6/Cheese/obj/Deb
 c:/Users/Edo Hooghiemster/Documents/Echte Project 5-6/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.AssemblyInfo.cs
 c:/Users/Edo Hooghiemster/Documents/Echte Project 5-6/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.dll
 c:/Users/Edo Hooghiemster/Documents/Echte Project 5-6/Project-5-6/Cheese/obj/Debug/netcoreapp2.0/Cheese.pdb
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.deps.json
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.runtimeconfig.json
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.runtimeconfig.dev.json
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.dll
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.pdb
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.csprojResolveAssemblyReference.cache
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.csproj.CoreCompileInputs.cache
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyInfoInputs.cache
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyInfo.cs
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.dll
+C:\Users\marti\Documents\GitHub\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.pdb
