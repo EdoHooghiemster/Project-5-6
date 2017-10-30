@@ -1,0 +1,34 @@
+@model IEnumerable<Cheese.Models.Kaas> 
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+             
+            <h3>Productnaam</h3>
+             
+            <div class="clearfix"></div>
+        </div>
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left">
+    
+                        <img class="media-object" src="data:image/jpeg;base64,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" height="250" width="300"> 
+                        
+                </div>
+                <div class="media-body">
+                <h4 class="media-heading"></h4>
+                Beschrijving
+              <br> <br> <br> <br> <br> <br> <br> <br>
+                <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <br>  
+                    <li> Prijs <a asp-area="" asp-controller="Home" asp-action="Winkelwagen"> <span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a></li>
+                    
+                </ul>
+            </div>
+                <div class="clearfix"></div>
+                               
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
