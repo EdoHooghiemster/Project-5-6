@@ -6861,7 +6861,7 @@ Follow me on Twitter @maridlcrmn
   margin-right:2%;
   width:20%;
   float:left;
-  min-height: 200px;
+  min-height: 130px;
   border-right: 1px solid grey;
 }
 
@@ -6869,7 +6869,15 @@ Follow me on Twitter @maridlcrmn
   margin-right: 2%;
   width: 20%;
   float: left;
-  min-height: 200px;
+  min-height: 130px;
+}
+.about2{
+  margin-left:20%;
+  margin-right:2%;
+  width:20%;
+  float:left;
+  min-height: 130px;
+  border-right: 1px solid grey;
 }
 .klantenservic{
   
