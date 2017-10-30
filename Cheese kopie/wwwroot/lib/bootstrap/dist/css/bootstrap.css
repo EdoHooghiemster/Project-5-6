@@ -63,6 +63,7 @@ margin-bottom: 5px;
 }
 }
 html {
+  box-sizing: border-box;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -1127,13 +1128,13 @@ th {
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          box-sizing: inherit;
 }
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          box-sizing: inherit;
 }
 html {
   font-size: 10px;
@@ -6311,7 +6312,7 @@ button.close {
 .carousel-inner {
   position: relative;
   right: -25%;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
 }
 .carousel-inner > .item {
@@ -6891,6 +6892,8 @@ Follow me on Twitter @maridlcrmn
   position: relative;
   top:-70px;
   left:10%;
+  width:90%;
+  height: 30px;
 }
 .zoekfunctie{
   position: relative;
@@ -6903,16 +6906,19 @@ Follow me on Twitter @maridlcrmn
   position:relative;
   left: 40%;
   top:65%;
+  width: 10%;
 }
 .admin{
   position: relative;
   left:65%;
   top: -25%;
+  width: 10%;
   }
 .winkelwagen{
   position:relative;
   left: 73%;
   top:-100%;
+  width: 10%;
 }
 .wrapper{
   height: 30px;
