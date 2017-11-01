@@ -20,14 +20,19 @@
     <div class="siteboven">
             <a asp-area=""  asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/logo.png" width="70%" height="400%" ></a>
             <div class="zoekfunctie">
-                <div class="input-group custom-search-form">
-                    <input type="text" class="form-control">
+                 @using (Html.BeginForm("Aanbiedingen", "Kaas",FormMethod.Get))
+                    {
+                    <div class="input-group custom-search-form">
+                    <input type="text" name="SearchString" class="form-control">
                     <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">
+                    <button class="btn btn-primary" input type= "submit">
                     <span class="glyphicon glyphicon-search"></span>
                     </button>
-                    </span>
-                </div><!-- /input-group-->
+                    </span> 
+                    </div>
+                    }
+               
+                <!-- /input-group-->
             </div>
             <div class="login">
                 <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px" > Login</a>
