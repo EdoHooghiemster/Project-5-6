@@ -75,8 +75,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Prijs)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Afbeelding)
+            <td> 
+                <a href="@Html.DisplayFor(modelItem => item.Afbeelding)">Link</a>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

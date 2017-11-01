@@ -28,6 +28,23 @@ namespace Cheese.Controllers
             return View(await _context.Kazen.ToListAsync());
         }
 
+        public async Task<IActionResult> Product(int? id)
+        {
+            //return View(await _context.Kazen.ToListAsync());
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var kaas = await _context.Kazen.SingleOrDefaultAsync(m => m.Id == id);
+            if (kaas == null)
+            {
+                return NotFound();
+            }
+            return View(kaas);
+        }
+
         // GET: Kaas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
