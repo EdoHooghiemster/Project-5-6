@@ -23,9 +23,17 @@ namespace Cheese.Controllers
         {
             return View(await _context.Kazen.ToListAsync());
         }
-        public async Task<IActionResult> Aanbiedingen()
+        public async Task<IActionResult> Aanbiedingen(string searchString)
         {
-            return View(await _context.Kazen.ToListAsync());
+             var kazen = from m in _context.Kazen
+                 select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kazen = kazen.Where(s => s.Naam.Contains(searchString));
+            }
+
+            return View(await kazen.ToListAsync());
         }
 
         // GET: Kaas/Details/5
