@@ -93,12 +93,6 @@ namespace Cheese.Controllers
 
             return View();
         }
-         public IActionResult Winkelwagen()
-        {
-            
-
-            return View();
-        }
 
         public IActionResult Error()
         {
