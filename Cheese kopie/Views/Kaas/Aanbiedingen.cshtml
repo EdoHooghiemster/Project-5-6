@@ -1,5 +1,6 @@
 @model IEnumerable<Cheese.Models.Kaas> 
-<h1>-25% Korting</h1> 
+<h1> </h1> 
+
 <div class="container"> 
   <div class="row"> 
       <!-- BEGIN PRODUCTS --> 
@@ -9,10 +10,9 @@
             
             <a asp-action="Product" asp-route-id="@item.Id">
             <img src= @Html.DisplayFor(modelItem => item.Afbeelding) alt="...">
-            <h4> @Html.DisplayFor(modelItem => item.Naam)</h4>
-            </a> 
-             
-           
+
+            <h4> <a asp-area="" asp-controller="Kaas" asp-action="Product" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Naam)</a>
+           </h4> 
             <div class="ratings"> 
                     <span class="glyphicon glyphicon-star"></span> 
                     <span class="glyphicon glyphicon-star"></span> 
@@ -28,7 +28,8 @@
                 <p class="price">@Html.DisplayFor(modelItem => item.Prijs)</p>
               </div> 
               <div class="col-md-6 col-sm-6"> 
-                <button class="btn btn-success right" >Winkelwagen</button> 
+                <a asp-area="" asp-controller="Home" asp-action="Winkelwagen"><button class="btn btn-success right" >Winkelwagen</button></a> 
+                
               </div> 
                
             </div> 

@@ -23,9 +23,35 @@ namespace Cheese.Controllers
         {
             return View(await _context.Kazen.ToListAsync());
         }
-        public async Task<IActionResult> Aanbiedingen()
+        
+         public async Task<IActionResult> Product(int? id)
         {
-            return View(await _context.Kazen.ToListAsync());
+            //return View(await _context.Kazen.ToListAsync());
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var kaas = await _context.Kazen.SingleOrDefaultAsync(m => m.Id == id);
+            if (kaas == null)
+            {
+                return NotFound();
+            }
+            return View(kaas);
+        
+        }
+        public async Task<IActionResult> Aanbiedingen(string searchString)
+        {
+             var kazen = from m in _context.Kazen
+                 select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kazen = kazen.Where(s => s.Naam.Contains(searchString));
+            }
+
+            return View(await kazen.ToListAsync());
         }
 
         public async Task<IActionResult> Product(int? id)
