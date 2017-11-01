@@ -11,8 +11,7 @@
             <a asp-action="Product" asp-route-id="@item.Id">
             <img src= @Html.DisplayFor(modelItem => item.Afbeelding) alt="...">
 
-            <h4> <a asp-area="" asp-controller="Kaas" asp-action="Product" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Naam)</a>
-           </h4> 
+            <h4> @Html.DisplayFor(modelItem => item.Naam)</h4> 
             <div class="ratings"> 
                     <span class="glyphicon glyphicon-star"></span> 
                     <span class="glyphicon glyphicon-star"></span> 

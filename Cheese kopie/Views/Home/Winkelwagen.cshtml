@@ -1,0 +1,44 @@
+@model IEnumerable<Cheese.Models.Kaas> 
+
+<ol id="orderProcess">
+    <li><span class="step-number">1</span><a href="~/">Choose Item</a></li>
+    <li class="current"><span class="step-number">2</span>Place Order</li>
+    <li><span class="step-number">3</span><a href="~/ReviewCart">Review Cart</a></li>
+</ol>
+
+<h1>Place Your Order: @Html.DisplayFor(model => model.Naam)</h1>
+<form action="" method="post">
+    <fieldset class="no-legend">
+        <legend>Place Your Order</legend>
+        <img class="product-image order-image" src="~/Images/Products/Thumbnails/@product.ImageName" alt="Image of @product.Name"/>
+        <ul class="orderPageList" data-role="listview">
+            <li>
+                <div>
+                    
+                </div>                
+            </li>
+            <li class="quantity">
+                <div class="fieldcontainer" data-role="fieldcontain">
+                    <label for="orderQty">Quantity</label>
+                    <input type="text" id="orderQty" name="orderQty" value="@(quantity == 0 ? 1 : quantity)"/>
+                    x
+                    <span id="orderPrice">@string.Format("{0:f}", product.Price)</span>
+                    =
+                    <span id="orderTotal">@string.Format("{0:f}", quantity == 0 ? product.Price : quantity * product.Price)</span>
+                </div>
+            </li>
+        </ul>
+        <p class="actions">
+            <input type="hidden" name="productId" value="@product.Id" />
+            <input type="hidden" name="price" value="@product.Price" />
+            @if(!IsPost){
+                <input type="submit" value="Place Order" data-role="none" data-inline="true"/>
+            }
+        </p>
+        <div id="basket">
+            @if(totalItems > 0){
+                <text>Your cart contains <strong>@totalItems</strong> items</text>
+            }
+        </div>
+    </fieldset>
+</form>
