@@ -6928,3 +6928,7 @@ Follow me on Twitter @maridlcrmn
   top:-190%;
   width: 10%;
 }
+.mytable tbody tr td{
+ border-collapse: collapse; 
+ max-width: 200px}
+.mytable th, .pretty-table td { padding: 0.5em; }

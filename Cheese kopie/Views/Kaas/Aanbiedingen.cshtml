@@ -27,7 +27,8 @@
                 <p class="price">@Html.DisplayFor(modelItem => item.Prijs)</p>
               </div> 
               <div class="col-md-6 col-sm-6"> 
-                <button class="btn btn-success right" >Winkelwagen</button> 
+                <a asp-area="" asp-controller="Home" asp-action="Winkelwagen"> <button class="btn btn-success right" >Winkelwagen</button> </a>
+                
               </div> 
                
             </div> 
