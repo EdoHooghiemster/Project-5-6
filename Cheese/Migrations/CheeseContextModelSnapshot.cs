@@ -49,6 +49,8 @@ namespace Cheese.Migrations
 
                     b.Property<string>("Afkomst");
 
+                    b.Property<string>("Beschrijving");
+
                     b.Property<bool>("Biologisch");
 
                     b.Property<bool>("Eetbarekorst");
@@ -102,6 +104,10 @@ namespace Cheese.Migrations
                     b.Property<string>("Voornaam")
                         .IsRequired();
 
+                    b.Property<string>("Wachtwoord")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
                     b.HasKey("Id");
 
                     b.HasIndex("KlantId");
@@ -132,9 +138,13 @@ namespace Cheese.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Afbeelding");
+
                     b.Property<int>("Afkomst");
 
                     b.Property<float>("Alcohol");
+
+                    b.Property<string>("Beschrijving");
 
                     b.Property<int>("Inhoud");
 

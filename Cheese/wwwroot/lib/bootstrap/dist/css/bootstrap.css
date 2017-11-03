@@ -63,6 +63,7 @@ margin-bottom: 5px;
 }
 }
 html {
+  box-sizing: border-box;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -1127,13 +1128,13 @@ th {
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          box-sizing: inherit;
 }
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;
+          box-sizing: inherit;
 }
 html {
   font-size: 10px;
@@ -6311,7 +6312,7 @@ button.close {
 .carousel-inner {
   position: relative;
   right: -25%;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
 }
 .carousel-inner > .item {
@@ -6860,7 +6861,7 @@ Follow me on Twitter @maridlcrmn
   margin-right:2%;
   width:20%;
   float:left;
-  min-height: 200px;
+  min-height: 130px;
   border-right: 1px solid grey;
 }
 
@@ -6868,7 +6869,15 @@ Follow me on Twitter @maridlcrmn
   margin-right: 2%;
   width: 20%;
   float: left;
-  min-height: 200px;
+  min-height: 130px;
+}
+.about2{
+  margin-left:20%;
+  margin-right:2%;
+  width:20%;
+  float:left;
+  min-height: 130px;
+  border-right: 1px solid grey;
 }
 .klantenservic{
   
@@ -6888,32 +6897,71 @@ Follow me on Twitter @maridlcrmn
   margin-left: 5%;
 }
 .siteboven{
-  position: relative;
-  top:-70px;
+  position: absolute;
+  top:-10px;
   left:10%;
+  width:90%;
+  height: 3%;
 }
 .zoekfunctie{
   position: relative;
-  top:170%;
+  top:130%;
   left: 1%;
   max-height: 100px;
-  max-width: 40%;
+  max-width: 62%;
 }
 .login{
   position:relative;
-  left: 40%;
-  top:65%;
+  left: 67%;
+  top:-25%;
+  width: 10%;
 }
 .admin{
   position: relative;
-  left:65%;
-  top: -25%;
+  left:75%;
+  top: -115%;
+  width: 10%;
   }
 .winkelwagen{
   position:relative;
-  left: 73%;
-  top:-100%;
+  left: 83%;
+  top:-190%;
+  width: 10%;
 }
-.wrapper{
-  height: 30px;
+.mytable tbody tr td{
+ border-collapse: collapse; 
+ max-width: 200px}
+.mytable th, .pretty-table td { padding: 0.5em; }
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
 }

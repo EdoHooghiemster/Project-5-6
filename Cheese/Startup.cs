@@ -24,10 +24,10 @@ namespace Cheese
         public void ConfigureServices (IServiceCollection services) {
 
         //Add this line to your method
-        services.AddDbContext<CheeseContext> (
-                    opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=postgres"));
+            services.AddDbContext<CheeseContext> (
+                        opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=MikeGolf"));
 
-        services.AddMvc ();
+            services.AddMvc ();
 
         }
 

@@ -23,12 +23,8 @@ namespace Cheese.Controllers
         {
             return View(await _context.Kazen.ToListAsync());
         }
-        public async Task<IActionResult> Aanbiedingen()
-        {
-            return View(await _context.Kazen.ToListAsync());
-        }
-
-        public async Task<IActionResult> Product(int? id)
+        
+         public async Task<IActionResult> Product(int? id)
         {
             //return View(await _context.Kazen.ToListAsync());
 
@@ -43,7 +39,22 @@ namespace Cheese.Controllers
                 return NotFound();
             }
             return View(kaas);
+        
         }
+        public async Task<IActionResult> Producten(string searchString)
+        {
+             var kazen = from m in _context.Kazen
+                 select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kazen = kazen.Where(s => s.Naam.Contains(searchString));
+            }
+
+            return View(await kazen.ToListAsync());
+        }
+
+        
 
         // GET: Kaas/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -74,7 +85,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding")] Kaas kaas)
+        public async Task<IActionResult> Create([Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving")] Kaas kaas)
         {
             if (ModelState.IsValid)
             {
@@ -106,7 +117,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding")] Kaas kaas)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving")] Kaas kaas)
         {
             if (id != kaas.Id)
             {

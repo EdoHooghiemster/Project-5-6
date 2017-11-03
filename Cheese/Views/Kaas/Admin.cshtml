@@ -42,6 +42,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Afbeelding)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Beschrijving)
+                </th>
             <th></th>
         </tr>
     </thead>
@@ -75,8 +78,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Prijs)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Afbeelding)
+            <td> 
+                <a href="@Html.DisplayFor(modelItem => item.Afbeelding)">Link</a>
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Beschrijving)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
