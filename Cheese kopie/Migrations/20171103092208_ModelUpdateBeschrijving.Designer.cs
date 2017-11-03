@@ -11,9 +11,10 @@ using System;
 namespace Cheese.Migrations
 {
     [DbContext(typeof(CheeseContext))]
-    partial class CheeseContextModelSnapshot : ModelSnapshot
+    [Migration("20171103092208_ModelUpdateBeschrijving")]
+    partial class ModelUpdateBeschrijving
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

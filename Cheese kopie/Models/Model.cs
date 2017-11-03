@@ -31,6 +31,7 @@ namespace Cheese.Models
     public string Afkomst { get; set; }
     public float Prijs { get; set; }
     public string Afbeelding {get; set;}
+    public string Beschrijving{get; set;}
     public List<Kaas> Kazen { get; set; }
   }
 
@@ -43,6 +44,8 @@ namespace Cheese.Models
     public float Alcohol { get; set; }
     public int Afkomst { get; set; }
     public int Prijs { get; set; }
+    public string Afbeelding{get; set;}
+    public string Beschrijving{get; set;}
     public List<Wijn> Wijnen { get; set; }
   }
 
@@ -59,8 +62,14 @@ namespace Cheese.Models
       public int Geboortedatum { get; set; }
       [Required(ErrorMessage = "Geboortedatum is nodig")]
       public string Email { get; set; }
+     
+     [Required(ErrorMessage = "Wachtwoord is nodig")]
+     [StringLength(20,MinimumLength = 0, ErrorMessage = "Wachtwoord mag maximaal 20 karakters lang zijn")]
+     public string Wachtwoord{get; set;}
+     
      [Required(ErrorMessage = "Telefoonnummer is nodig")]
      [StringLength(10,MinimumLength = 10, ErrorMessage = "Nummer moet 10 cijfers lang zijn")]
+
       public string Telnummer { get; set; }
       [Required(ErrorMessage = "Adres is nodig")]
       public string Adres { get; set; }

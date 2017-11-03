@@ -41,7 +41,7 @@ namespace Cheese.Controllers
             return View(kaas);
         
         }
-        public async Task<IActionResult> Aanbiedingen(string searchString)
+        public async Task<IActionResult> Producten(string searchString)
         {
              var kazen = from m in _context.Kazen
                  select m;
@@ -85,7 +85,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding")] Kaas kaas)
+        public async Task<IActionResult> Create([Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving")] Kaas kaas)
         {
             if (ModelState.IsValid)
             {
@@ -117,7 +117,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding")] Kaas kaas)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
