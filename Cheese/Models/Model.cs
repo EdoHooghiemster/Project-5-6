@@ -16,7 +16,13 @@ namespace Cheese.Models
      public CheeseContext(DbContextOptions<CheeseContext> options): base(options)
         {
         }
-  }
+
+        public CheeseContext()
+        {
+        }
+    }
+
+    
 
   public class Kaas
   {
@@ -61,6 +67,8 @@ namespace Cheese.Models
      [Required( ErrorMessage = "Geboortedatum incorrect")]
       public int Geboortedatum { get; set; }
       [Required(ErrorMessage = "Geboortedatum is nodig")]
+      
+       [RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3]\.)|(([\w-]+\.)+))([a-zA-Z{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Voer een juiste e-mail in.")]
       public string Email { get; set; }
      
      [Required(ErrorMessage = "Wachtwoord is nodig")]

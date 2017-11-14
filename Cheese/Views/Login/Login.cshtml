@@ -1,71 +1,33 @@
-@model IEnumerable<Cheese.Models.Klant>
+@model Cheese.Models.Klant
 
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h2>Index</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Voornaam)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Achternaam)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Geslacht)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Geboortedatum)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Telnummer)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Adres)
-                </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Voornaam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Achternaam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Geslacht)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Geboortedatum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telnummer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Adres)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+
+<h2>Login</h2>
+
+<form class="form-horizontal" asp-controller="Login" asp-action="log" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Email" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Wachtwoord" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Wachtwoord" class="form-control" />
+            <span asp-validation-for="Wachtwoord" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Login</button>
+        </div>
+    </div>
+    <button  asp-controller="Login" asp-action="Create"style="font-size:20px">Registreren</button>
+
+</form>
+

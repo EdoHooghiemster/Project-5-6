@@ -19,9 +19,9 @@ namespace Cheese.Controllers
         }
 
         // GET: Login
-        public async Task<IActionResult> Login()
+        public IActionResult Login()
         {
-            return View(await _context.Klanten.ToListAsync());
+            return View();
         }
 
         // GET: Login/Details/5
@@ -72,6 +72,7 @@ namespace Cheese.Controllers
                         Geslacht = klant.Geslacht,
                         Geboortedatum = klant.Geboortedatum,
                         Email = klant.Email,
+                        Wachtwoord = klant.Wachtwoord,
                         Telnummer = klant.Telnummer,
                         Adres = klant.Adres
 
@@ -79,7 +80,7 @@ namespace Cheese.Controllers
                 _context.Add(m);
                 _context.SaveChanges();
 
-                return RedirectToAction(nameof(Login));
+                return RedirectToAction("Login");
                 }
 
             }
@@ -132,7 +133,7 @@ namespace Cheese.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Login));
+                return RedirectToAction(nameof(LoggedIn));
             }
             return View(klant);
         }
@@ -169,6 +170,68 @@ namespace Cheese.Controllers
         private bool KlantExists(int id)
         {
             return _context.Klanten.Any(e => e.Id == id);
+        }
+
+         public IActionResult log()
+        {
+            return View();
+        }
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] 
+        public IActionResult log(Klant login)
+        {
+            using (CheeseContext db = new CheeseContext())
+            {
+                var usr = _context.Klanten.Where(u => u.Email == login.Email && u.Wachtwoord == login.Wachtwoord).FirstOrDefault();            
+                if (usr != null)
+                {
+                    TempData["Email"] = usr.Email.ToString();
+                    TempData["Wachtwoord"] = usr.Wachtwoord.ToString();
+                   
+                    TempData["Id"] = usr.Id.ToString();
+                    TempData.Keep();
+                   
+                     return Redirect("Details/" + TempData["Id"]);
+                    
+                }
+                else 
+                {
+                    ModelState.AddModelError("", "Username is fout.");
+                
+                }
+                
+            }
+            return View();
+       
+        }
+      
+
+        public IActionResult LoggedIn()
+        {
+            return Redirect("Details/" + TempData["Id"]);
+        }
+
+        public IActionResult LogUit()
+        {
+            TempData.Remove("Email");
+            
+            return RedirectToAction("Login");
+            
+        }
+        public IActionResult Profiel()
+        {
+            if (TempData["Voornaam"] != null)
+            {
+                return View();
+                
+            }   
+            else
+            {
+                return RedirectToAction("Kaaspakketten");
+            }
         }
     }
 }
