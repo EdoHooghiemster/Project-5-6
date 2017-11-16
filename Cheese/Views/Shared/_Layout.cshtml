@@ -20,7 +20,7 @@
     <div class="siteboven">
             <a asp-area=""  asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/logo.png" width="70%" height="400%" ></a>
             <div class="zoekfunctie">
-                 @using (Html.BeginForm("Aanbiedingen", "Kaas",FormMethod.Get))
+                 @using (Html.BeginForm("Producten", "Kaas",FormMethod.Get))
                     {
                     <div class="input-group custom-search-form">
                     <input type="text" name="SearchString" class="form-control">

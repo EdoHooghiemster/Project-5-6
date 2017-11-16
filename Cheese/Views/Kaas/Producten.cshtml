@@ -4,7 +4,15 @@
     ViewData["Title"] = "Onze Producten";
 }
 
-<h1> </h1> 
+<h1> </h1>
+
+@if(Model.Count() == 0){
+  <br><h2>Geen zoekresultaten gevonden</h2>
+}
+
+<br> <a asp-area="" asp-controller="Kaas" asp-action="Producten" asp-route-searchString="Jonge kaas"><button class="btn btn-success right" >Jonge kaas</button></a>
+<br><br> <a asp-area="" asp-controller="Kaas" asp-action="Producten" asp-route-searchString="Oude kaas"><button class="btn btn-success right" >Oude kaas</button></a>
+<br><br> <a asp-area="" asp-controller="Kaas" asp-action="Producten" asp-route-searchString="Geitenkaas"><button class="btn btn-success right" >Geitenkaas</button></a>
 
 <div class="container"> 
   <div class="row"> 

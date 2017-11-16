@@ -48,7 +48,7 @@ namespace Cheese.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                kazen = kazen.Where(s => s.Naam.Contains(searchString));
+                kazen = kazen.Where(s => s.Naam.ToLower().Contains(searchString.ToLower()));
             }
 
             return View(await kazen.ToListAsync());
