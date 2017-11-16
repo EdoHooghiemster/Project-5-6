@@ -71,6 +71,7 @@ namespace Cheese.Models
        [RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3]\.)|(([\w-]+\.)+))([a-zA-Z{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Voer een juiste e-mail in.")]
       public string Email { get; set; }
      
+     [DataType(DataType.Password)]
      [Required(ErrorMessage = "Wachtwoord is nodig")]
      [StringLength(20,MinimumLength = 0, ErrorMessage = "Wachtwoord mag maximaal 20 karakters lang zijn")]
      public string Wachtwoord{get; set;}
@@ -81,6 +82,8 @@ namespace Cheese.Models
       public string Telnummer { get; set; }
       [Required(ErrorMessage = "Adres is nodig")]
       public string Adres { get; set; }
+
+   
       public List<Klant> Klanten { get; set; }
   }
 
