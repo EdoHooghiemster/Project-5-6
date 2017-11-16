@@ -11,6 +11,7 @@ namespace Cheese.Models
     public DbSet<Klant> Klanten { get; set; }
     public DbSet<Bestelling> Bestellingen { get; set; }
     public DbSet<Leverancier> Leveranciers { get; set; } 
+    public DbSet<Winkelwagen> Winkelwagens { get; set; }
     
     //this method is run automatically by EF the first time we run the application
      public CheeseContext(DbContextOptions<CheeseContext> options): base(options)
@@ -104,4 +105,15 @@ namespace Cheese.Models
       public string Telnummer { get; set; }
       public List<Leverancier> Leveranciers { get; set; }
   }
+
+  public class Winkelwagen
+    {
+        public int Id { get; set; }
+        public string Soort { get; set; }
+        public int Aantal { get; set; }
+        public string Naam { get; set; }
+        public int Prijs { get; set; }
+        public List<Winkelwagen> Winkelwagens { get; set; }
+
+    }
 }

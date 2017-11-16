@@ -1,0 +1,50 @@
+@model IEnumerable<Cheese.Models.Winkelwagen>
+
+@{
+    ViewData["Title"] = "Winkelwagen";
+}
+
+<h2>Winkelwagen</h2>
+
+<table class ="table">
+    <form asp-action="Winkelwagen">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Aantal);
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prijs)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naam)
+                    </td>
+                    <td>
+                        <select name = "Aantal" id = "Aantal">
+                            <option value = 1>1</option>
+                            <option value = 2>2</option>
+                            <option value = 3>3</option>
+                            <option value = 4>4</option>
+                            <option value = 5>5</option>
+                            
+                        </select>
+                        <div class="from-group">
+                            <input type="submit" value="Gay" class="btn btn-default" />   
+                        </div>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prijs)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </form>
+</table>
