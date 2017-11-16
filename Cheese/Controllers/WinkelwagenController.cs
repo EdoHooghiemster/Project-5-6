@@ -19,11 +19,19 @@ namespace Cheese.Controllers
         }
 
         // GET: Kaas
-        public async Task<IActionResult> Winkelwagen()
+       
+        public async Task<IActionResult> Winkelwagen(string searchString)
         {
-            return View(await _context.Winkelwagens.ToListAsync());
-        }
+            var kazen = from m in _context.Winkelwagens
+                select m;
 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kazen = kazen.Where(s => s.Naam.Contains(searchString));
+            }
+
+            return View(await kazen.ToListAsync());
+        }
         // GET: Kaas/Create
         public IActionResult Create()
         {

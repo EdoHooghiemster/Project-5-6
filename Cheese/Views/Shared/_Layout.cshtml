@@ -41,17 +41,17 @@
             </div>
            
          }
-          @if(TempData["Voornaam"] != null)
-         {
-           <div class="login">
-                <a asp-area="" asp-controller="Login" asp-action="Loguit" style="font-size:20px"> Log uit</a>
-           </div>
-         }
-            <div class="admin">
-                <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:20px" > Admin</a>
+    
+          <!---  <div class="admin">
+                <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:20px"> Admin</a>
             </div>
+           -->
+          
+
+            
+
             <div class="winkelwagen">
-                <a asp-area="" asp-controller="Home" asp-action="Winkelwagen"> <span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a>
+                <a asp-area="Winkelwagen" asp-controller="Winkelwagen" asp-action="Winkelwagen"> <span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a>
             </div>
     </div>  
        <!-- Second navbar for sign in -->
@@ -71,10 +71,10 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Lekker_bij_de_kaas"style="font-size:20px">Lekker bij de kaas</a></li>
                     @if(TempData["Email"] != null) { 
                                 
-                            <li><a asp-area="" asp-controller="Login" asp-action="LoggedIn"style="font-size:20px">Welkom @TempData["Email"].ToString() </a></li>
+                            <li><a asp-area="" asp-controller="Login" asp-action="Admin"style="font-size:20px">Welkom @TempData["Email"].ToString() </a></li>
 
                             <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
-
+                        
                             <div class="container">
                                 <div class="row">
 
@@ -96,13 +96,14 @@
                             </div>
                         
                             }
-                            @{
+                               @{
                                 TempData.Keep("Voornaam");
                                 TempData.Keep("Achternaam");
                                 TempData.Keep("Geslacht");
                                 TempData.Keep("Id");
                                 TempData.Keep("Email");
                                 TempData.Keep("Wachtwoord");
+                            
                             }
               
                     </ul>

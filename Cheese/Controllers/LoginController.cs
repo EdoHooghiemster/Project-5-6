@@ -13,6 +13,10 @@ namespace Cheese.Controllers
     {
         private readonly CheeseContext _context;
 
+        public IActionResult Layout()
+        {
+            return View();
+        }
         public LoginController(CheeseContext context)
         {
             _context = context;
@@ -190,10 +194,18 @@ namespace Cheese.Controllers
                 {
                     TempData["Email"] = usr.Email.ToString();
                     TempData["Wachtwoord"] = usr.Wachtwoord.ToString();
-                   
                     TempData["Id"] = usr.Id.ToString();
-                    TempData.Keep();
-                   
+                    TempData["Voornaam"] = usr.Voornaam.ToString();
+                    TempData["Achternaam"] = usr.Achternaam.ToString();
+                    TempData["Adres"] = usr.Adres.ToString();
+                    TempData["Geboortedatum"] = usr.Geboortedatum.ToString();
+                    TempData["Geslacht"] = usr.Geslacht.ToString();
+                    TempData["Telnummer"] = usr.Telnummer.ToString();
+
+                    TempData.Keep("Email");
+                    TempData.Keep("Wachtwoord");
+                    
+                    
                      return Redirect("Details/" + TempData["Id"]);
                     
                 }
@@ -204,11 +216,24 @@ namespace Cheese.Controllers
                 }
                 
             }
-            return View();
+            return RedirectToAction("Login");
        
         }
       
 
+        public IActionResult Admin() 
+        {
+           
+            if (TempData["Email"].ToString() == "Admin@live.nl")
+            {
+                        return RedirectToAction("Admin","Kaas");
+            }
+            else
+            {
+                return Redirect("Details/" + TempData["Id"]);
+            }
+          
+        }
         public IActionResult LoggedIn()
         {
             return Redirect("Details/" + TempData["Id"]);
@@ -217,7 +242,9 @@ namespace Cheese.Controllers
         public IActionResult LogUit()
         {
             TempData.Remove("Email");
-            
+            TempData.Remove("Id");
+            TempData.Remove("Voornaam");
+            TempData.Remove("Wachtwoord");
             return RedirectToAction("Login");
             
         }
