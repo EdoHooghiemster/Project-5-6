@@ -43,8 +43,8 @@ namespace Cheese.Controllers
         }
         public async Task<IActionResult> Producten(string searchString)
         {
-             var kazen = from m in _context.Kazen
-                 select m;
+            var kazen = from m in _context.Kazen
+                select m;
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -54,7 +54,31 @@ namespace Cheese.Controllers
             return View(await kazen.ToListAsync());
         }
 
-        
+        public async Task<IActionResult> Kaassoort(string id)
+        {
+            var kazen = from m in _context.Kazen
+                select m;
+
+            if (!String.IsNullOrEmpty(id))
+            {
+                kazen = kazen.Where(s => s.Kaassoort == id);
+            }
+
+            return View(await kazen.ToListAsync());
+        }
+
+        public async Task<IActionResult> Landpagina(string land)
+        {
+            var kazen = from m in _context.Kazen
+                select m;
+
+            if (!String.IsNullOrEmpty(land))
+            {
+                kazen = kazen.Where(s => s.Afkomst == land);
+            }
+
+            return View(await kazen.ToListAsync());
+        }
 
         // GET: Kaas/Details/5
         public async Task<IActionResult> Details(int? id)

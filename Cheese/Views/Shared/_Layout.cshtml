@@ -34,9 +34,19 @@
                
                 <!-- /input-group-->
             </div>
+             @if(TempData["Voornaam"] == null)
+         {
             <div class="login">
-                <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px" > Login</a>
+                <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px"> Login</a>
             </div>
+           
+         }
+          @if(TempData["Voornaam"] != null)
+         {
+           <div class="login">
+                <a asp-area="" asp-controller="Login" asp-action="Loguit" style="font-size:20px"> Log uit</a>
+           </div>
+         }
             <div class="admin">
                 <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:20px" > Admin</a>
             </div>
@@ -58,9 +68,43 @@
                     <li><a asp-area="" asp-controller="Kaas" asp-action="Producten" style="font-size:20px">Onze producten</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Kaaspakketten"style="font-size:20px">Kaaspakketten</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Kaasfondue"style="font-size:20px">Kaasfondue</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Kaasgereedschap"style="font-size:20px">Kaasgereedschap</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Lekker_bij_de_kaas"style="font-size:20px">Lekker bij de kaas</a></li>
-            
+                    @if(TempData["Email"] != null) { 
+                                
+                            <li><a asp-area="" asp-controller="Login" asp-action="LoggedIn"style="font-size:20px">Welkom @TempData["Email"].ToString() </a></li>
+
+                            <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
+
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a asp-area="" asp-controller="Login" asp-action="LoggedIn"style="font-size:20px">Mijn Gegevens</a></li>
+                                        <li><a asp-area="" asp-controller="Login" asp-action=""style="font-size:20px">Mijn Bestellingen</a></li>
+                                    <li><a asp-area="" asp-controller="Login" asp-action=""style="font-size:20px">Favorieten</a></li>
+                                        <li class="divider"></li>
+                                    <li><a asp-area="" asp-controller="Login" asp-action="LogUit"style="font-size:20px">Uitloggen</a></li>
+                                        
+                                    </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                            }
+                            @{
+                                TempData.Keep("Voornaam");
+                                TempData.Keep("Achternaam");
+                                TempData.Keep("Geslacht");
+                                TempData.Keep("Id");
+                                TempData.Keep("Email");
+                                TempData.Keep("Wachtwoord");
+                            }
+              
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->

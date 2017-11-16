@@ -13187,23 +13187,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\edoho_000\\.nuget\\packages\\": {},
+    "C:\\Users\\rogie\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project-5-6\\Cheese kopie\\Cheese.csproj",
+      "projectUniqueName": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese kopi\\Cheese.csproj",
       "projectName": "Cheese",
-      "projectPath": "D:\\Project-5-6\\Cheese kopie\\Cheese.csproj",
-      "packagesPath": "C:\\Users\\edoho_000\\.nuget\\packages\\",
-      "outputPath": "D:\\Project-5-6\\Cheese kopie\\obj\\",
+      "projectPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese kopi\\Cheese.csproj",
+      "packagesPath": "C:\\Users\\rogie\\.nuget\\packages\\",
+      "outputPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese kopi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\edoho_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rogie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
