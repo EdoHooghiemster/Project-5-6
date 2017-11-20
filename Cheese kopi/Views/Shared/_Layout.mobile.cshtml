@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Cheese</title>
+    <title>@ViewData["Title"] - Cheese (mobile)</title>
     
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -19,9 +19,12 @@
     </environment>
 </head>
 <body>
+    <div class="Title">
+        <h>Mobile version</h>
+    </div>
     <div class="siteboven">
         <div class="wrapper">
-            <a asp-area=""  asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/logo.png" width="70%" height="400%" ></a>
+            <a asp-area=""  asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/logo.png" width="60%" height="300%" ></a>
             <div class="zoekfunctie">
                 <div class="input-group custom-search-form">
                     <input type="text" class="form-control">
@@ -35,22 +38,22 @@
          @if(TempData["Voornaam"] == null)
          {
             <div class="login">
-                <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px"> Login</a>
+                <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:10px"> Login</a>
             </div>
            
          }
           @if(TempData["Voornaam"] != null)
          {
            <div class="login">
-                <a asp-area="" asp-controller="Login" asp-action="Loguit" style="font-size:20px"> Log uit</a>
+                <a asp-area="" asp-controller="Login" asp-action="Loguit" style="font-size:10px"> Log uit</a>
            </div>
          }
             
             <div class="admin">
-                <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:20px"> Admin</a>
+                <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:10px"> Admin</a>
             </div>
             <div class="winkelwagen">
-                <a asp-area="" asp-controller="Home" asp-action="Winkelwagen"> <span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a>
+                <a asp-area="" asp-controller="Home" asp-action="Winkelwagen"> <span class="glyphicon glyphicon-shopping-cart" style="font-size:10px"></span></a>
             </div>
         </div>
     </div>  
@@ -64,16 +67,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-2">
           <ul class="nav navbar-nav navbar-left">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Land" style="font-size:20px">Land</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Type" style="font-size:20px">Type</a></li>
-                    <li><a asp-area="" asp-controller="Kaas" asp-action="Aanbiedingen" style="font-size:20px">Aanbiedingen</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Kaaspakketten"style="font-size:20px">Kaaspakketten</a></li>
-                    <li><a asp-area="" asp-controller="Login" asp-action="Create"style="font-size:20px">Registreren</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Land" style="font-size:10px">Land</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Type" style="font-size:10px">Type</a></li>
+                    <li><a asp-area="" asp-controller="Kaas" asp-action="Aanbiedingen" style="font-size:10px">Aanbiedingen</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Kaaspakketten"style="font-size:10px">Kaaspakketten</a></li>
+                    <li><a asp-area="" asp-controller="Login" asp-action="Create"style="font-size:5px">Registreren</a></li>
                  
-                    <li><a asp-area="" asp-controller="Home" asp-action="Lekker_bij_de_kaas"style="font-size:20px">Lekker bij de kaas</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Lekker_bij_de_kaas"style="font-size:10px">Lekker bij de kaas</a></li>
                     @if(TempData["Voornaam"] != null) { 
                         
-                     <li><a asp-area="" asp-controller="Login" asp-action="LoggedIn"style="font-size:20px">Welkom @TempData["Voornaam"].ToString() </a></li>
+                     <li><a asp-area="" asp-controller="Login" asp-action="LoggedIn"style="font-size:10px">Welkom @TempData["Voornaam"].ToString() </a></li>
 
                     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet" />
 
@@ -129,6 +132,7 @@
                 <b>Over</b>
                 <p></p>
                 <p>Cheese with Ease is ontwikkeld door Flying Corporation in 2017. Het is een webshop met een groot assortiment aan verschillende kazen en kaasproducten.</p>
+        
             </div>
             <div class="about">    
                 <b>Klantenservice</b>

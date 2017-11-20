@@ -27,7 +27,7 @@
 }
 
 /* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 840px) {
     /* Hide captions */
     .carousel-caption {
         display: none;
