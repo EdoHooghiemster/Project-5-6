@@ -66,6 +66,7 @@ namespace Cheese.Migrations
                     Geboortedatum = table.Column<int>(type: "int4", nullable: false),
                     Geslacht = table.Column<string>(type: "text", nullable: true),
                     KlantId = table.Column<int>(type: "int4", nullable: true),
+                    Wachtwoord = table.Column<string>(type: "text", nullable: true),
                     Telnummer = table.Column<string>(type: "text", nullable: true),
                     Voornaam = table.Column<string>(type: "text", nullable: true)
                 },

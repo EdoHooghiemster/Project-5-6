@@ -65,17 +65,19 @@ namespace Cheese.Models
       public string Achternaam { get; set; }
       [Required(ErrorMessage = "Geslacht is nodig")]
       public string Geslacht { get; set; }
-     [Required( ErrorMessage = "Geboortedatum incorrect")]
-      public int Geboortedatum { get; set; }
+
+      [RegularExpression(@"^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$", ErrorMessage = "onjuist ingevoerd")] 
       [Required(ErrorMessage = "Geboortedatum is nodig")]
+      public string Geboortedatum { get; set; }
+      [Required(ErrorMessage = "Email is nodig")]
       
        [RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3]\.)|(([\w-]+\.)+))([a-zA-Z{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Voer een juiste e-mail in.")]
       public string Email { get; set; }
-     
-     [DataType(DataType.Password)]
+    
+  
      [Required(ErrorMessage = "Wachtwoord is nodig")]
      [StringLength(20,MinimumLength = 0, ErrorMessage = "Wachtwoord mag maximaal 20 karakters lang zijn")]
-     public string Wachtwoord{get; set;}
+      public string Wachtwoord{get; set;}
      
      [Required(ErrorMessage = "Telefoonnummer is nodig")]
      [StringLength(10,MinimumLength = 10, ErrorMessage = "Nummer moet 10 cijfers lang zijn")]

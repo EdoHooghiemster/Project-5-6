@@ -112,13 +112,15 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Telnummer,Adres")] Klant klant)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Telnummer,Adres")] Klant klant)
         {
             if (id != klant.Id)
-            {
+            { 
+              
                 return NotFound();
+               
             }
-
+           
             if (ModelState.IsValid)
             {
                 try
@@ -204,7 +206,7 @@ namespace Cheese.Controllers
 
                     TempData.Keep("Email");
                     TempData.Keep("Wachtwoord");
-                    
+                    TempData.Keep("Id");
                     
                      return Redirect("Details/" + TempData["Id"]);
                     
