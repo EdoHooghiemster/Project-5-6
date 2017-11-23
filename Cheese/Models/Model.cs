@@ -63,6 +63,7 @@ namespace Cheese.Models
       public string Voornaam { get; set; }
       [Required(ErrorMessage = "Achternaam is nodig")]
       public string Achternaam { get; set; }
+      
       [Required(ErrorMessage = "Geslacht is nodig")]
       public string Geslacht { get; set; }
 

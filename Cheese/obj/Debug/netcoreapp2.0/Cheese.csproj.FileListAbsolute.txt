@@ -110,7 +110,6 @@ D:\echt project\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.runtimeconfig.
 D:\echt project\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.runtimeconfig.dev.json
 D:\echt project\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.dll
 D:\echt project\Project-5-6\Cheese\bin\Debug\netcoreapp2.0\Cheese.pdb
-D:\echt project\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.csprojResolveAssemblyReference.cache
 D:\echt project\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.csproj.CoreCompileInputs.cache
 D:\echt project\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyInfoInputs.cache
 D:\echt project\Project-5-6\Cheese\obj\Debug\netcoreapp2.0\Cheese.AssemblyInfo.cs

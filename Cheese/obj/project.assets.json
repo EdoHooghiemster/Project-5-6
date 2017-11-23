@@ -13187,39 +13187,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\edoho_000\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\rogie\\.nuget\\packages\\": {},
->>>>>>> master
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\echt project\\Project-5-6\\Cheese\\Cheese.csproj",
       "projectName": "Cheese",
       "projectPath": "D:\\echt project\\Project-5-6\\Cheese\\Cheese.csproj",
       "packagesPath": "C:\\Users\\edoho_000\\.nuget\\packages\\",
       "outputPath": "D:\\echt project\\Project-5-6\\Cheese\\obj\\",
-=======
-      "projectUniqueName": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\Cheese.csproj",
-      "projectName": "Cheese",
-      "projectPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\Cheese.csproj",
-      "packagesPath": "C:\\Users\\rogie\\.nuget\\packages\\",
-      "outputPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\obj\\",
->>>>>>> master
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\edoho_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\rogie\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> master
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13287,6 +13271,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\echt project\\Project-5-6\\Cheese\\obj\\Cheese.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",
