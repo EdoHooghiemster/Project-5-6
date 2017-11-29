@@ -17,9 +17,12 @@
     </environment>
 </head>
 <body>
-    <div class="siteboven">
-            <a asp-area=""  asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/logo.png" width="70%" height="400%" ></a>
+    
+                
+                  
+                   
             <div class="zoekfunctie">
+                <a asp-area=""  asp-controller="Home" asp-action="Index" ><img src="~/images/logo.png" width="25%" ></a>
                  @using (Html.BeginForm("Producten", "Kaas",FormMethod.Get))
                     {
                     <div class="input-group custom-search-form">
@@ -33,14 +36,8 @@
                     }
                
                 <!-- /input-group-->
-            </div>
-             @if(TempData["Voornaam"] == null)
-         {
-            <div class="login">
-                <a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px"> Login</a>
-            </div>
-           
-         }
+       
+      
     
           <!---  <div class="admin">
                 <a asp-area="" asp-controller="Kaas" asp-action="Admin" style="font-size:20px"> Admin</a>
@@ -59,16 +56,26 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-       
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-2">
           <ul class="nav navbar-nav navbar-left">
+                    <li><a asp-area="" asp-controller="Kaas" asp-action="Producten" style="font-size:20px">Onze producten</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Land" style="font-size:20px">Land</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Type" style="font-size:20px">Type</a></li>
-                    <li><a asp-area="" asp-controller="Kaas" asp-action="Producten" style="font-size:20px">Onze producten</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Kaaspakketten"style="font-size:20px">Kaaspakketten</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Kaasfondue"style="font-size:20px">Kaasfondue</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Lekker_bij_de_kaas"style="font-size:20px">Lekker bij de kaas</a></li>
+                    @if(TempData["Voornaam"] == null)
+                        {
+                        <li><a asp-area="" asp-controller="Login" asp-action="Login" style="font-size:20px"> Login</a></li>
+                         }
+
                     @if(TempData["Email"] != null) { 
                                 
                             <li><a asp-area="" asp-controller="Login" asp-action="Admin"style="font-size:20px">Welkom @TempData["Email"].ToString() </a></li>
@@ -111,7 +118,7 @@
             </div><!-- /.container -->
             </nav><!-- /.navbar -->
         </div>       
-        
+   
         <!-- Second navbar for sign in -->
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav"></ul>

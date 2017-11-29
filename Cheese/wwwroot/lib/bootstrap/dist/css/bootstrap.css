@@ -4335,10 +4335,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  height: 50px;
-  padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4557,7 +4555,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default {
   background-color: #73E64C;
   border-color: #E7E7E7;
-  top: 40px;
+  top: 0px;
   
 
   
@@ -6906,17 +6904,26 @@ Follow me on Twitter @maridlcrmn
   height: 3%;
 }
 .zoekfunctie{
-  position: relative;
-  top:130%;
-  left: 1%;
-  max-height: 100px;
-  max-width: 62%;
+  
+  text-align: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.foto{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 .login{
   position:relative;
   left: 67%;
   top:-25%;
   width: 10%;
+}
+.inloggen{
+  width: 70%;
 }
 .admin{
   position: relative;
@@ -6925,10 +6932,11 @@ Follow me on Twitter @maridlcrmn
   width: 10%;
   }
 .winkelwagen{
-  position:relative;
-  left: 83%;
-  top:-190%;
-  width: 10%;
+  text-align: right;
+  width: 30%;
+  margin-left: auto;
+  margin-right: -60px;
+  margin-top: -25px;
 }
 .mytable tbody tr td{
  border-collapse: collapse; 
