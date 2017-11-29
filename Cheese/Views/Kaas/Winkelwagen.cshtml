@@ -1,0 +1,99 @@
+@model IEnumerable<Cheese.Models.Kaas>
+<!--
+@{
+    ViewData["Title"] = "Kaas";
+}
+
+<h2>Winkelwagen</h2>
+
+<table class ="table">
+    <form asp-action="Winkelwagen">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Aantal);
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prijs)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                if(item.Winkelwagen){
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naam)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem=>item.Aantal)
+                            <select name = "Aantal" id = "Aantal">
+                            <option value = 1>1</option>
+                            <option value = 2>2</option>
+                            <option value = 3>3</option>
+                            <option value = 4>4</option>
+                            <option value = 5>5</option>
+                            
+                        </select>
+                        <div class="from-group">
+                            <input type="submit" value="Gay" class="btn btn-default" />   
+                        </div>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prijs)
+                    </td>
+                </tr>
+            }else{}}
+        </tbody>
+    </form>
+</table> -->
+
+@{
+    ViewData["Title"] = "Winkelwagen";
+}
+
+<h2>Winkelwagen</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Aantal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prijs) per stuk
+                </th>
+                <th>Prijs</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    if(item.Winkelwagen == true){
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aantal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prijs)
+            </td>
+            <td>
+                @(item.Prijs * item.Aantal)
+            </td>
+            <!-- <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td> -->
+        </tr>
+}}
+    </tbody>
+</table>

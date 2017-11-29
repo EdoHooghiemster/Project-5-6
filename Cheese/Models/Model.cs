@@ -40,6 +40,8 @@ namespace Cheese.Models
     public string Afbeelding {get; set;}
     public string Beschrijving{get; set;}
     public List<Kaas> Kazen { get; set; }
+    public bool Winkelwagen { get; set; }
+    public int Aantal { get; set; }
   }
 
   public class Wijn
