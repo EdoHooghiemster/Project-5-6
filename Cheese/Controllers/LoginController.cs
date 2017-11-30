@@ -24,6 +24,11 @@ namespace Cheese.Controllers
             _context = context;
         }
 
+        public IActionResult Activatie_scherm()
+        {   
+            return View();
+        }
+
         // GET: Login
         public IActionResult Login()
         {
@@ -90,7 +95,7 @@ namespace Cheese.Controllers
                 _context.Add(m);
                 _context.SaveChanges();
 
-                return RedirectToAction("Login");
+                return RedirectToAction("Activatie_scherm");
                 }
 
             }
