@@ -209,23 +209,35 @@ namespace Cheese.Controllers
                     TempData["Geboortedatum"] = usr.Geboortedatum.ToString();
                     TempData["Geslacht"] = usr.Geslacht.ToString();
                     TempData["Telnummer"] = usr.Telnummer.ToString();
-
+                    TempData["Geactiveerd"] = usr.Geactiveerd.ToString();
                     TempData.Keep("Email");
                     TempData.Keep("Wachtwoord");
                     TempData.Keep("Id");
+                    TempData.Keep("Geactiveerd");
                     
-                     return Redirect("Details/" + TempData["Id"]);
-                    
+                    if(usr.Geactiveerd == "Ja") 
+                    {
+                            
+                            return Redirect("Details/" + TempData["Id"]);
+                    }
+                    else
+                    {
+                            TempData.Remove("Email");
+                            TempData.Remove("Id");
+                            TempData.Remove("Voornaam");
+                            TempData.Remove("Wachtwoord");
+                           
+                            RedirectToAction("Login");
+                            ModelState.AddModelError("Email", "Username is fout of niet geactiveerd."); 
+        
+                    }
                 }
-                else 
-                {
-                    ModelState.AddModelError("", "Username is fout.");
-                
-                }
+             
                 
             }
+           ModelState.AddModelError("Email", "Onjuiste gegevens"); 
             return RedirectToAction("Login");
-       
+              
         }
       
 
