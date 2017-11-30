@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Cheese.Models;
+using System.Net;
+using System.Net.Mail;
 
 namespace Cheese.Controllers
 {
@@ -61,7 +63,7 @@ namespace Cheese.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                Guid activationCode = Guid.NewGuid();
                 if (_context.Klanten.Where(u => u.Email == klant.Email).Any())
                 {
                     ModelState.AddModelError("Email","E-Mail al in gebruik");
@@ -78,9 +80,13 @@ namespace Cheese.Controllers
                         Email = klant.Email,
                         Wachtwoord = klant.Wachtwoord,
                         Telnummer = klant.Telnummer,
-                        Adres = klant.Adres
-
+                        Adres = klant.Adres,
+                        ActivatieCode = activationCode,
+                        Geactiveerd = "Nee"
                     };
+
+                SendActivationEmail(klant, activationCode);
+
                 _context.Add(m);
                 _context.SaveChanges();
 
@@ -260,6 +266,52 @@ namespace Cheese.Controllers
             else
             {
                 return RedirectToAction("Kaaspakketten");
+            }
+        }
+
+        // GET: Activation
+        public IActionResult Activation()
+        {
+            ViewBag.Message = "Onjuiste activatiecode.";
+            if (RouteData.Values["id"] != null)
+            {
+                Guid activationCode = new Guid(RouteData.Values["id"].ToString());
+                Klant klant = _context.Klanten.SingleOrDefault(user => user.ActivatieCode == activationCode);
+                if(klant != null){
+                    if(klant.Geactiveerd == "Nee"){
+                        klant.Geactiveerd = "Ja";
+                        _context.SaveChanges();
+                        ViewBag.Message = "Uw account is succesvol geactiveerd!";
+                    }
+                    else{
+                        ViewBag.Message = "Uw account is al geactiveerd.";
+                    }
+
+                }
+            }
+
+            return View();
+        }
+        
+        private void SendActivationEmail(Klant klant, Guid activationCode)
+        {
+            using (MailMessage mm = new MailMessage("cheesewitheasewebshop@gmail.com", klant.Email))
+            {
+                mm.Subject = "Account Activation";
+                string body = "Hello " + klant.Voornaam + ",";
+                body += "<br /><br />Please click the following link to activate your account";
+                body += "<br /><a href = '" + string.Format("http://localhost:5000/Login/Activation/{0}", activationCode) + "'>Click here to activate your account.</a>";
+                body += "<br /><br />Thanks";
+                mm.Body = body;
+                mm.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
+                NetworkCredential NetworkCred = new NetworkCredential("cheesewitheasewebshop@gmail.com", "Cheesewithease");
+                smtp.UseDefaultCredentials = true;
+                smtp.Credentials = NetworkCred;
+                smtp.Port = 587;
+                smtp.Send(mm);
             }
         }
     }

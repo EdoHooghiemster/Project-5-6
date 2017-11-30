@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace Cheese.Models
 {
@@ -89,6 +90,9 @@ namespace Cheese.Models
       [Required(ErrorMessage = "Adres is nodig")]
       public string Adres { get; set; }
 
+      public Guid ActivatieCode { get; set; }
+
+      public string Geactiveerd { get; set; }
    
       public List<Klant> Klanten { get; set; }
   }
