@@ -83,7 +83,7 @@ namespace Cheese.Models
      [StringLength(20,MinimumLength = 0, ErrorMessage = "Wachtwoord mag maximaal 20 karakters lang zijn")]
       public string Wachtwoord{get; set;}
 
-    [Required(ErrorMessage = " ")]
+    
     [Compare("Wachtwoord", ErrorMessage = "Wachtwoord komt niet overeen.")]
     public string confirmWachtwoord { get; set; }
 

@@ -25,7 +25,7 @@ namespace Cheese
 
         //Add this line to your method
             services.AddDbContext<CheeseContext> (
-                        opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=Admin221"));
+                        opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=MikeGolf"));
 
             services.AddMvc ();
 
@@ -49,7 +49,7 @@ namespace Cheese
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Kaas}/{action=Index}/{id?}");
             });
         }
     }

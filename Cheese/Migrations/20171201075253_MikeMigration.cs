@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Cheese.Migrations
 {
-    public partial class InitialCreateCheeseDB : Migration
+    public partial class MikeMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,7 +32,10 @@ namespace Cheese.Migrations
                 {
                     Id = table.Column<int>(type: "int4", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Aantal = table.Column<int>(type: "int4", nullable: false),
+                    Afbeelding = table.Column<string>(type: "text", nullable: true),
                     Afkomst = table.Column<string>(type: "text", nullable: true),
+                    Beschrijving = table.Column<string>(type: "text", nullable: true),
                     Biologisch = table.Column<bool>(type: "bool", nullable: false),
                     Eetbarekorst = table.Column<bool>(type: "bool", nullable: false),
                     KaasId = table.Column<int>(type: "int4", nullable: true),
@@ -41,7 +44,8 @@ namespace Cheese.Migrations
                     Merk = table.Column<string>(type: "text", nullable: true),
                     Naam = table.Column<string>(type: "text", nullable: true),
                     Prijs = table.Column<float>(type: "float4", nullable: false),
-                    Vet = table.Column<string>(type: "text", nullable: true)
+                    Vet = table.Column<string>(type: "text", nullable: true),
+                    Winkelwagen = table.Column<bool>(type: "bool", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,15 +64,18 @@ namespace Cheese.Migrations
                 {
                     Id = table.Column<int>(type: "int4", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Achternaam = table.Column<string>(type: "text", nullable: true),
-                    Adres = table.Column<string>(type: "text", nullable: true),
-                    Email = table.Column<string>(type: "text", nullable: true),
-                    Geboortedatum = table.Column<int>(type: "int4", nullable: false),
-                    Geslacht = table.Column<string>(type: "text", nullable: true),
+                    Achternaam = table.Column<string>(type: "text", nullable: false),
+                    ActivatieCode = table.Column<Guid>(type: "uuid", nullable: false),
+                    Adres = table.Column<string>(type: "text", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    Geactiveerd = table.Column<string>(type: "text", nullable: true),
+                    Geboortedatum = table.Column<string>(type: "text", nullable: false),
+                    Geslacht = table.Column<string>(type: "text", nullable: false),
                     KlantId = table.Column<int>(type: "int4", nullable: true),
-                    Wachtwoord = table.Column<string>(type: "text", nullable: true),
-                    Telnummer = table.Column<string>(type: "text", nullable: true),
-                    Voornaam = table.Column<string>(type: "text", nullable: true)
+                    Telnummer = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
+                    Voornaam = table.Column<string>(type: "text", nullable: false),
+                    Wachtwoord = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false),
+                    confirmWachtwoord = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -108,8 +115,10 @@ namespace Cheese.Migrations
                 {
                     Id = table.Column<int>(type: "int4", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Afbeelding = table.Column<string>(type: "text", nullable: true),
                     Afkomst = table.Column<int>(type: "int4", nullable: false),
                     Alcohol = table.Column<float>(type: "float4", nullable: false),
+                    Beschrijving = table.Column<string>(type: "text", nullable: true),
                     Inhoud = table.Column<int>(type: "int4", nullable: false),
                     Merk = table.Column<string>(type: "text", nullable: true),
                     Naam = table.Column<string>(type: "text", nullable: true),
@@ -123,6 +132,29 @@ namespace Cheese.Migrations
                         name: "FK_Wijnen_Wijnen_WijnId",
                         column: x => x.WijnId,
                         principalTable: "Wijnen",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Winkelwagens",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int4", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Aantal = table.Column<int>(type: "int4", nullable: false),
+                    Naam = table.Column<string>(type: "text", nullable: true),
+                    Prijs = table.Column<int>(type: "int4", nullable: false),
+                    Soort = table.Column<string>(type: "text", nullable: true),
+                    WinkelwagenId = table.Column<int>(type: "int4", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Winkelwagens", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Winkelwagens_Winkelwagens_WinkelwagenId",
+                        column: x => x.WinkelwagenId,
+                        principalTable: "Winkelwagens",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -146,6 +178,11 @@ namespace Cheese.Migrations
                 name: "IX_Wijnen_WijnId",
                 table: "Wijnen",
                 column: "WijnId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Winkelwagens_WinkelwagenId",
+                table: "Winkelwagens",
+                column: "WinkelwagenId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -164,6 +201,9 @@ namespace Cheese.Migrations
 
             migrationBuilder.DropTable(
                 name: "Wijnen");
+
+            migrationBuilder.DropTable(
+                name: "Winkelwagens");
         }
     }
 }

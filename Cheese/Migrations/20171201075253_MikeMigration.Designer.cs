@@ -11,8 +11,8 @@ using System;
 namespace Cheese.Migrations
 {
     [DbContext(typeof(CheeseContext))]
-    [Migration("20171103092208_ModelUpdateBeschrijving")]
-    partial class ModelUpdateBeschrijving
+    [Migration("20171201075253_MikeMigration")]
+    partial class MikeMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,8 @@ namespace Cheese.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Aantal");
+
                     b.Property<string>("Afbeelding");
 
                     b.Property<string>("Afkomst");
@@ -70,6 +72,8 @@ namespace Cheese.Migrations
 
                     b.Property<string>("Vet");
 
+                    b.Property<bool>("Winkelwagen");
+
                     b.HasKey("Id");
 
                     b.HasIndex("KaasId");
@@ -85,13 +89,18 @@ namespace Cheese.Migrations
                     b.Property<string>("Achternaam")
                         .IsRequired();
 
+                    b.Property<Guid>("ActivatieCode");
+
                     b.Property<string>("Adres")
                         .IsRequired();
 
                     b.Property<string>("Email")
                         .IsRequired();
 
-                    b.Property<int>("Geboortedatum");
+                    b.Property<string>("Geactiveerd");
+
+                    b.Property<string>("Geboortedatum")
+                        .IsRequired();
 
                     b.Property<string>("Geslacht")
                         .IsRequired();
@@ -108,6 +117,9 @@ namespace Cheese.Migrations
                     b.Property<string>("Wachtwoord")
                         .IsRequired()
                         .HasMaxLength(20);
+
+                    b.Property<string>("confirmWachtwoord")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -164,6 +176,28 @@ namespace Cheese.Migrations
                     b.ToTable("Wijnen");
                 });
 
+            modelBuilder.Entity("Cheese.Models.Winkelwagen", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Aantal");
+
+                    b.Property<string>("Naam");
+
+                    b.Property<int>("Prijs");
+
+                    b.Property<string>("Soort");
+
+                    b.Property<int?>("WinkelwagenId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("WinkelwagenId");
+
+                    b.ToTable("Winkelwagens");
+                });
+
             modelBuilder.Entity("Cheese.Models.Kaas", b =>
                 {
                     b.HasOne("Cheese.Models.Kaas")
@@ -190,6 +224,13 @@ namespace Cheese.Migrations
                     b.HasOne("Cheese.Models.Wijn")
                         .WithMany("Wijnen")
                         .HasForeignKey("WijnId");
+                });
+
+            modelBuilder.Entity("Cheese.Models.Winkelwagen", b =>
+                {
+                    b.HasOne("Cheese.Models.Winkelwagen")
+                        .WithMany("Winkelwagens")
+                        .HasForeignKey("WinkelwagenId");
                 });
 #pragma warning restore 612, 618
         }

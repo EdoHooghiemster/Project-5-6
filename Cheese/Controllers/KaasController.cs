@@ -18,6 +18,18 @@ namespace Cheese.Controllers
             _context = context;
         }
 
+        public async Task<IActionResult> Index(string searchString)
+        {
+            var kazen = from m in _context.Kazen
+                select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kazen = kazen.Where(s => s.Naam.ToLower().Contains(searchString.ToLower()));
+            }
+
+            return View(await kazen.ToListAsync());
+        }
         // GET: Kaas
         public async Task<IActionResult> Admin()
         {

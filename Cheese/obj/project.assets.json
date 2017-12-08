@@ -7993,7 +7993,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
@@ -13187,23 +13187,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\edoho\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/mikekeehnen/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\edoho\\Documents\\Project-5-6\\Cheese\\Cheese.csproj",
+      "projectUniqueName": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
       "projectName": "Cheese",
-      "projectPath": "C:\\Users\\edoho\\Documents\\Project-5-6\\Cheese\\Cheese.csproj",
-      "packagesPath": "C:\\Users\\edoho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\edoho\\Documents\\Project-5-6\\Cheese\\obj\\",
+      "projectPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
+      "packagesPath": "/Users/mikekeehnen/.nuget/packages/",
+      "outputPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\edoho\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/mikekeehnen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13227,7 +13227,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "2.0.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {

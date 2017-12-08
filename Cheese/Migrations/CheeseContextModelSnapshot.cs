@@ -117,6 +117,9 @@ namespace Cheese.Migrations
                         .IsRequired()
                         .HasMaxLength(20);
 
+                    b.Property<string>("confirmWachtwoord")
+                        .IsRequired();
+
                     b.HasKey("Id");
 
                     b.HasIndex("KlantId");

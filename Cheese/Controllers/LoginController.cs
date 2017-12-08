@@ -84,6 +84,7 @@ namespace Cheese.Controllers
                         Geboortedatum = klant.Geboortedatum,
                         Email = klant.Email,
                         Wachtwoord = klant.Wachtwoord,
+                        confirmWachtwoord = klant.confirmWachtwoord,
                         Telnummer = klant.Telnummer,
                         Adres = klant.Adres,
                         ActivatieCode = activationCode,
@@ -123,7 +124,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Telnummer,Adres")] Klant klant)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Telnummer,Adres")] Klant klant)
         {
             if (id != klant.Id)
             { 
@@ -249,7 +250,7 @@ namespace Cheese.Controllers
         public IActionResult Admin() 
         {
            
-            if (TempData["Email"].ToString() == "Admin@live.nl")
+            if (TempData["Email"].ToString() == "mikekeehnen@me.com")
             {
                         return RedirectToAction("Admin","Kaas");
             }
