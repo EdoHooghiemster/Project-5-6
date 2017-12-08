@@ -86,94 +86,79 @@
                         <div class = "password">
                             <div class="checkbox">
                                 <label>
-                                    <input asp-for="Winkelwagen" checked/> @Html.DisplayNameFor(model => model.Winkelwagen)
+                                    <input asp-for="Winkelwagen" checked="checked"/> @Html.DisplayNameFor(model => model.Winkelwagen)
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                            <label asp-for="Aantal" class="control-label"></label>
-                            <input asp-for="Aantal" class="form-control" />
-                            <span asp-validation-for="Aantal" class="text-danger"></span>
-                        </div>
-                    <!-- <div class="form-group">
-                        <label asp-for="Aantal">aantal</label>
-                        <input type="number" name="test" list="testlist">
-                        <datalist id="testlist">
-                            <option value="1"/>
-                            <option value="2"/>
-                        </datalist> -->
-                        <!-- <select class = "form-control" id = "Aantal">
-                            <option value=1 selected>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                        </select> -->
-                    <!-- </div> -->
+                        <label asp-for="Aantal" class="control-label"></label>
+                        <input asp-for="Aantal" class="form-control"/>
+                        <span asp-validation-for="Aantal" class="text-danger"></span>
+                    </div>
                     <div class = "password">
                         <div class="form-group">
                             <label asp-for="Naam" class="control-label"></label>
-                            <input asp-for="Naam" class="form-control" />
+                            <input asp-for="Naam" class="form-control" readonly/>
                             <span asp-validation-for="Naam" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Merk" class="control-label"></label>
-                            <input asp-for="Merk" class="form-control" />
+                            <input asp-for="Merk" class="form-control" readonly/>
                             <span asp-validation-for="Merk" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Melksoort" class="control-label"></label>
-                            <input asp-for="Melksoort" class="form-control" />
+                            <input asp-for="Melksoort" class="form-control" readonly />
                             <span asp-validation-for="Melksoort" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Vet" class="control-label"></label>
-                            <input asp-for="Vet" class="form-control" />
+                            <input asp-for="Vet" class="form-control" readonly/>
                             <span asp-validation-for="Vet" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <div class="checkbox">
                                 <label>
-                                    <input asp-for="Biologisch" /> @Html.DisplayNameFor(model => model.Biologisch)
+                                    <input asp-for="Biologisch" disabled="disabled" /> @Html.DisplayNameFor(model => model.Biologisch)
                                 </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <label asp-for="Kaassoort" class="control-label"></label>
-                            <input asp-for="Kaassoort" class="form-control" />
+                            <input asp-for="Kaassoort" class="form-control" readonly/>
                             <span asp-validation-for="Kaassoort" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <div class="checkbox">
                                 <label>
-                                    <input asp-for="Eetbarekorst" /> @Html.DisplayNameFor(model => model.Eetbarekorst)
+                                    <input asp-for="Eetbarekorst" disabled="disabled"/> @Html.DisplayNameFor(model => model.Eetbarekorst)
                                 </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <label asp-for="Afkomst" class="control-label"></label>
-                            <input asp-for="Afkomst" class="form-control" />
+                            <input asp-for="Afkomst" class="form-control" readonly/>
                             <span asp-validation-for="Afkomst" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Prijs" class="control-label"></label>
-                            <input asp-for="Prijs" class="form-control" />
+                            <input asp-for="Prijs" class="form-control" readonly/>
                             <span asp-validation-for="Prijs" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Afbeelding" class="control-label"></label>
-                            <input asp-for="Afbeelding" class="form-control" />
+                            <input asp-for="Afbeelding" class="form-control" readonly/>
                             <span asp-validation-for="Afbeelding" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Beschrijving" class="control-label"></label>
-                            <input asp-for="Beschrijving" class="form-control" />
+                            <input asp-for="Beschrijving" class="form-control" readonly/>
                             <span asp-validation-for="Beschrijving" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Save" class="btn btn-default" />
+                        <input type="submit" value="Toevoegen aan winkelwagen" class="btn btn-default" />
                     </div>
                     </div>
                 </form>

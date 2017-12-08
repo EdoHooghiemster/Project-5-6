@@ -55,7 +55,7 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Product(int id, [Bind("Id,Winkelwagen,Aantal")] Kaas kaas)
+        public async Task<IActionResult> Product(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
