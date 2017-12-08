@@ -43,15 +43,14 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Product(int id, [Bind("Winkelwagen")] Kaas kaas)
+        public async Task<IActionResult> Product(int id, [Bind("Id,Winkelwagen,Aantal")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            if(ModelState.IsValid){
                 try
                 {
                     _context.Update(kaas);
@@ -182,7 +181,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Winkelwagen,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving")] Kaas kaas)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Winkelwagen,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Aantal")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
