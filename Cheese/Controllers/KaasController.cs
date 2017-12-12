@@ -83,6 +83,54 @@ namespace Cheese.Controllers
             }
             return View(kaas);
         }
+        public async Task<IActionResult> Verwijderen(int? id)
+        {
+            //return View(await _context.Kazen.ToListAsync());
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var kaas = await _context.Kazen.SingleOrDefaultAsync(m => m.Id == id);
+            if (kaas == null)
+            {
+                return NotFound();
+            }
+            return View(kaas);
+        
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Verwijderen(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal")] Kaas kaas)
+        {
+            if (id != kaas.Id)
+            {
+                return NotFound();
+            }
+
+            if(ModelState.IsValid){
+                try
+                {
+                    _context.Update(kaas);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!KaasExists(kaas.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Winkelwagen));
+            }
+            return View(kaas);
+        }
+
         public async Task<IActionResult> Producten(string searchString)
         {
             var kazen = from m in _context.Kazen

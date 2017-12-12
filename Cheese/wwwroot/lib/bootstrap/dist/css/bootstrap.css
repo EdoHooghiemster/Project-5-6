@@ -6980,3 +6980,8 @@ Follow me on Twitter @maridlcrmn
 {
   display:none;
 }
+
+.test{
+  display:inline-block;
+  margin-right:5px;
+}
