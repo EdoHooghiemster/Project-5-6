@@ -1,0 +1,94 @@
+@model Cheese.Models.Kaas
+
+@{
+    ViewData["Title"] = "Verwijderen";
+}
+
+<h2>Weet je zeker dat je @Html.DisplayFor(model => model.Naam) uit je winkelwagen wil verwijderen?</h2>
+
+<div class="container">
+    <div class="panel panel-default">
+        <form asp-action = "Verwijderen">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class = "password">
+                <div class="form-group">
+                    <label asp-for="Aantal" class="control-label"></label>
+                    <input asp-for="Aantal" class="form-control"/>
+                    <span asp-validation-for="Aantal" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Naam" class="control-label"></label>
+                    <input asp-for="Naam" class="form-control" readonly/>
+                    <span asp-validation-for="Naam" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Merk" class="control-label"></label>
+                    <input asp-for="Merk" class="form-control" readonly/>
+                    <span asp-validation-for="Merk" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Melksoort" class="control-label"></label>
+                    <input asp-for="Melksoort" class="form-control" readonly />
+                    <span asp-validation-for="Melksoort" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vet" class="control-label"></label>
+                    <input asp-for="Vet" class="form-control" readonly/>
+                    <span asp-validation-for="Vet" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="Biologisch" disabled="disabled" /> @Html.DisplayNameFor(model => model.Biologisch)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Kaassoort" class="control-label"></label>
+                    <input asp-for="Kaassoort" class="form-control" readonly/>
+                    <span asp-validation-for="Kaassoort" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input asp-for="Eetbarekorst" disabled="disabled"/> @Html.DisplayNameFor(model => model.Eetbarekorst)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Afkomst" class="control-label"></label>
+                    <input asp-for="Afkomst" class="form-control" readonly/>
+                    <span asp-validation-for="Afkomst" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Prijs" class="control-label"></label>
+                    <input asp-for="Prijs" class="form-control" readonly/>
+                    <span asp-validation-for="Prijs" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Afbeelding" class="control-label"></label>
+                    <input asp-for="Afbeelding" class="form-control" readonly/>
+                    <span asp-validation-for="Afbeelding" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Beschrijving" class="control-label"></label>
+                    <input asp-for="Beschrijving" class="form-control" readonly/>
+                    <span asp-validation-for="Beschrijving" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="verwijderenknoppen">  
+                <div class="form-group"> 
+                    <input type="submit" value="Ja" class="btn btn-default" />
+                </div>
+            </div>
+            <div class="verwijderenknoppen">
+                <a asp-area="" asp-controller="Kaas" asp-action="Winkelwagen" class="btn btn-default"> Nee</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

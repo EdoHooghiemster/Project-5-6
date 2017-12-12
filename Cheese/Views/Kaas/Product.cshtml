@@ -157,9 +157,15 @@
                             <span asp-validation-for="Beschrijving" class="text-danger"></span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" value="Toevoegen aan winkelwagen" class="btn btn-default" />
+                    @if(Model.Winkelwagen){
+                        <div class="form-group">
+                        <input type="submit" value="Aantal aanpassen" class="btn btn-default" />
                     </div>
+                    }else{
+                        <div class="form-group">
+                            <input type="submit" value="Toevoegen aan winkelwagen" class="btn btn-default" />
+                        </div>
+                    }
                     </div>
                 </form>
     </div>
