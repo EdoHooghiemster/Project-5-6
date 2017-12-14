@@ -19,7 +19,7 @@ namespace Cheese
         {
             BuildWebHost(args).Run();
             using (var connection = new QC.SqlConnection(  
-                    "Server=tcp:cheesedb.database.windows.net,1433;Initial Catalog=CheeseDB;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30"
+                    "Server=tcp:cheesedb.database.windows.net,1433;Initial Catalog=CheeseDB;Persist Security Info=False;User ID=CheeseAdmin;Password=Ikbenadmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30"
                     
                     ))  
                 {  
