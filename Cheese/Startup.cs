@@ -41,7 +41,7 @@ namespace Cheese
             //         Console.ReadKey(true);  
             //     }  
             
-            // services.AddMvc ();
+            services.AddMvc ();
 
         }
 
