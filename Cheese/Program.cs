@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Cheese.Models;
+using QC = System.Data.SqlClient;
 
 namespace Cheese
 {
@@ -17,6 +18,17 @@ namespace Cheese
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
+            using (var connection = new QC.SqlConnection(  
+                    "Server=tcp:cheesedb.database.windows.net,1433;Initial Catalog=CheeseDB;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30"
+                    
+                    ))  
+                {  
+                    connection.Open();  
+                    Console.WriteLine("Connected successfully.");  
+
+                    Console.WriteLine("Press any key to finish...");  
+                    Console.ReadKey(true);  
+                }  
             
             
         }
