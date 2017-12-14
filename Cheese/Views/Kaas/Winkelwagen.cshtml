@@ -73,7 +73,6 @@
         </tr>
     </thead>
     <tbody>
-        <p id="Totaalprijs"></p>
 <script>
     var totaal = 0;
 </script>
@@ -94,16 +93,29 @@
                 <p id="hoi"></p>
                 <script>
                     totaal += '@Html.Raw(item.Prijs)' * '@Html.Raw(item.Aantal)';
-                    document.getElementById("Totaalprijs").innerHTML=totaal;
                 </script>
             </td>
             <td>
-                <a asp-action="Product" asp-route-id="@item.Id">Aantal aanpassen</a>
+                <a asp-action="Product" asp-route-id="@item.Id">Aantal aanpassen</a><br>
                 <a asp-action="Verwijderen" asp-route-id="@item.Id">Verwijderen</a>
             </td>
         </tr>
 }}
-
-
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <b>Totaalprijs</b>
+            </td>
+            <td>
+                <b id="Totaalprijs"></b>
+                <script>
+                    document.getElementById("Totaalprijs").innerHTML=totaal;
+                </script>
+            </td>
+            <td></td>
+        </tr>
+        
+        
     </tbody>
 </table>
