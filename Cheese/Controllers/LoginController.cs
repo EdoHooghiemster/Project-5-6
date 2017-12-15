@@ -318,7 +318,7 @@ namespace Cheese.Controllers
                 mm.Subject = "Account Activation";
                 string body = "Hello " + klant.Voornaam + ",";
                 body += "<br /><br />Please click the following link to activate your account";
-                body += "<br /><a href = '" + string.Format("https://www.cheesewithease.azurewebsites.com/Login/Activation/{0}", activationCode) + "'>Click here to activate your account.</a>";
+                body += "<br /><a href = '" + string.Format("http://cheesewithease.azurewebsites.net/Login/Activation/{0}", activationCode) + "'>Click here to activate your account.</a>";
                 body += "<br /><br />Thanks";
                 mm.Body = body;
                 mm.IsBodyHtml = true;
