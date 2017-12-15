@@ -221,22 +221,10 @@ namespace Cheese.Controllers
                     TempData.Keep("Id");
                     TempData.Keep("Geactiveerd");
                     
-                    if(usr.Geactiveerd == "Ja") 
-                    {
+                    
                             
                             return Redirect("Details/" + TempData["Id"]);
-                    }
-                    else
-                    {
-                            TempData.Remove("Email");
-                            TempData.Remove("Id");
-                            TempData.Remove("Voornaam");
-                            TempData.Remove("Wachtwoord");
-                           
-                            RedirectToAction("Login");
-                            ModelState.AddModelError("Email", "Username is fout of niet geactiveerd."); 
-        
-                    }
+                    
                 }
              
                 
