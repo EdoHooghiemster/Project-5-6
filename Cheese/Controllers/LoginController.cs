@@ -225,22 +225,10 @@ namespace Cheese.Controllers
                     TempData.Keep("Id");
                     TempData.Keep("Geactiveerd");
                     
-                    if(usr.Geactiveerd == "Ja") 
-                    {
+                    
                             
                             return Redirect("Details/" + TempData["Id"]);
-                    }
-                    else
-                    {
-                            TempData.Remove("Email");
-                            TempData.Remove("Id");
-                            TempData.Remove("Voornaam");
-                            TempData.Remove("Wachtwoord");
-                           
-                            RedirectToAction("Login");
-                            ModelState.AddModelError("Email", "Username is fout of niet geactiveerd."); 
-        
-                    }
+                    
                 }
              
                 
@@ -322,7 +310,7 @@ namespace Cheese.Controllers
                 mm.Subject = "Account Activation";
                 string body = "Hello " + klant.Voornaam + ",";
                 body += "<br /><br />Please click the following link to activate your account";
-                body += "<br /><a href = '" + string.Format("http://localhost:5000/Login/Activation/{0}", activationCode) + "'>Click here to activate your account.</a>";
+                body += "<br /><a href = '" + string.Format("http://cheesewithease.azurewebsites.net/Login/Activation/{0}", activationCode) + "'>Click here to activate your account.</a>";
                 body += "<br /><br />Thanks";
                 mm.Body = body;
                 mm.IsBodyHtml = true;

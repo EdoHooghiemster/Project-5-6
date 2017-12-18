@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Cheese.Models;
 using Microsoft.EntityFrameworkCore;
+using QC = System.Data.SqlClient;
 
 namespace Cheese
 {
@@ -27,6 +28,10 @@ namespace Cheese
             services.AddDbContext<CheeseContext> (
                         opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=postgres"));
 
+            //         Console.WriteLine("Press any key to finish...");  
+            //         Console.ReadKey(true);  
+            //     }  
+            
             services.AddMvc ();
 
         }
