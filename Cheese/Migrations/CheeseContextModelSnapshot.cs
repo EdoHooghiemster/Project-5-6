@@ -17,8 +17,8 @@ namespace Cheese.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
+                .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
 
             modelBuilder.Entity("Cheese.Models.Bestelling", b =>
                 {
@@ -90,9 +90,6 @@ namespace Cheese.Migrations
 
                     b.Property<Guid>("ActivatieCode");
 
-                    b.Property<string>("Adres")
-                        .IsRequired();
-
                     b.Property<string>("Email")
                         .IsRequired();
 
@@ -104,7 +101,16 @@ namespace Cheese.Migrations
                     b.Property<string>("Geslacht")
                         .IsRequired();
 
+                    b.Property<string>("Huisnummer")
+                        .IsRequired();
+
                     b.Property<int?>("KlantId");
+
+                    b.Property<string>("Postcode")
+                        .IsRequired();
+
+                    b.Property<string>("Straatnaam")
+                        .IsRequired();
 
                     b.Property<string>("Telnummer")
                         .IsRequired()
