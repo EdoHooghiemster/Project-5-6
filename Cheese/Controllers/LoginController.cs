@@ -86,7 +86,9 @@ namespace Cheese.Controllers
                         Wachtwoord = klant.Wachtwoord,
                         confirmWachtwoord = klant.confirmWachtwoord,
                         Telnummer = klant.Telnummer,
-                        Adres = klant.Adres,
+                        Straatnaam = klant.Straatnaam,
+                        Huisnummer = klant.Huisnummer,
+                        Postcode = klant.Postcode,
                         ActivatieCode = activationCode,
                         Geactiveerd = "Nee"
                     };
@@ -124,7 +126,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Telnummer,Adres")] Klant klant)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Telnummer,Straatnaam,Huisnummer,Postcode")] Klant klant)
         {
             if (id != klant.Id)
             { 
@@ -211,7 +213,9 @@ namespace Cheese.Controllers
                     TempData["Id"] = usr.Id.ToString();
                     TempData["Voornaam"] = usr.Voornaam.ToString();
                     TempData["Achternaam"] = usr.Achternaam.ToString();
-                    TempData["Adres"] = usr.Adres.ToString();
+                    TempData["Straatnaam"] = usr.Straatnaam.ToString();
+                    TempData["Huisnummer"] = usr.Huisnummer.ToString();
+                    TempData["Postcode"] = usr.Postcode.ToString();
                     TempData["Geboortedatum"] = usr.Geboortedatum.ToString();
                     TempData["Geslacht"] = usr.Geslacht.ToString();
                     TempData["Telnummer"] = usr.Telnummer.ToString();

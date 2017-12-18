@@ -25,7 +25,7 @@ namespace Cheese
 
         //Add this line to your method
             services.AddDbContext<CheeseContext> (
-                        opt => opt.UseSqlServer(@"Server=cheesedb.database.windows.net\mssqllocaldb;Database=CheeseDB;Trusted_Connection=True;"));
+                        opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=postgres"));
 
             services.AddMvc ();
 
