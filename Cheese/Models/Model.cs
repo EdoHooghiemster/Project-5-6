@@ -38,6 +38,7 @@ namespace Cheese.Models
     public string Kaassoort { get; set; }
     public bool Eetbarekorst { get; set; }
     public string Afkomst { get; set; }
+    [DisplayFormat(DataFormatString = "{0:c}")]
     public float Prijs { get; set; }
     public string Afbeelding {get; set;}
     public string Beschrijving{get; set;}

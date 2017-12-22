@@ -22,63 +22,63 @@
                 <div class="media-left">
                     <img src=@Html.DisplayFor(model => model.Afbeelding) alt="..." height="312.5" width="250">
                 </div>
-        <div class="media-body">
-                <h4 class="media-heading"></h4>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Merk)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Merk)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Melksoort)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Melksoort)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Vet)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Vet)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Biologisch)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Biologisch)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Kaassoort)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Kaassoort)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Eetbarekorst)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Eetbarekorst)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Afkomst)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Afkomst)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Prijs)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Prijs)
-                </dd>
-                 <dt>
-                    @Html.DisplayNameFor(model => model.Beschrijving)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Beschrijving)
-                </dd>
-                <form asp-action = "Product">
+                <div class="media-body">
+                    <h4 class="media-heading"></h4>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Merk)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Merk)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Melksoort)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Melksoort)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Vet)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Vet)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Biologisch)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Biologisch)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Kaassoort)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Kaassoort)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Eetbarekorst)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Eetbarekorst)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Afkomst)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Afkomst)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Prijs)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Prijs)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Beschrijving)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Beschrijving)
+                    </dd>
+                    <form asp-action = "Product">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <input type="hidden" asp-for="Id" />
                     <div class="form-group">    
@@ -158,14 +158,15 @@
                     </div>
                     @if(Model.Winkelwagen){
                         <div class="form-group">
-                        <input type="submit" value="Aantal aanpassen" class="btn btn-default" />
-                    </div>
+                            <input type="submit" value="Aantal aanpassen" class="btn btn-default" />
+                        </div>
                     }else{
                         <div class="form-group">
                             <input type="submit" value="Toevoegen aan winkelwagen" class="btn btn-default" />
                         </div>
                     }
-                    </div>
+                </div>
+                <button asp-controller="Rating" asp-action="Create" style="font-size:20px">Beoordelingen</button>
                 </form>
     </div>
 </div>
