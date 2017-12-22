@@ -1,0 +1,42 @@
+﻿@model Cheese.Models.Rating
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rating</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KlantId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KlantId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KaasId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KaasId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Rating">Back to List</a>
+</div>

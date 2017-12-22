@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Cheese.Models.Rating>
+
+@{
+    ViewData["Title"] = "Beoordelingen";
+}
+
+<h2>Rating</h2>
+
+<p>
+    <a asp-action="Create">Maak een nieuwe beoordeling</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Score)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Comment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KlantId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KaasId)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KlantId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KaasId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
