@@ -13,6 +13,7 @@ namespace Cheese.Models
     public DbSet<Bestelling> Bestellingen { get; set; }
     public DbSet<Leverancier> Leveranciers { get; set; } 
     public DbSet<Winkelwagen> Winkelwagens { get; set; }
+    public DbSet<Rating> Ratings { get; set; }
     
     //this method is run automatically by EF the first time we run the application
      public CheeseContext(DbContextOptions<CheeseContext> options): base(options)
@@ -37,6 +38,7 @@ namespace Cheese.Models
     public string Kaassoort { get; set; }
     public bool Eetbarekorst { get; set; }
     public string Afkomst { get; set; }
+    [DisplayFormat(DataFormatString = "{0:c}")]
     public float Prijs { get; set; }
     public string Afbeelding {get; set;}
     public string Beschrijving{get; set;}
@@ -136,5 +138,17 @@ namespace Cheese.Models
         public int Prijs { get; set; }
         public List<Winkelwagen> Winkelwagens { get; set; }
 
+    }
+
+    public class Rating
+    {
+        public int Id { get; set; }
+        [Required(ErrorMessage = "Voer een score in van 1 tot 5.")]
+        [Range(1, 5, ErrorMessage = "Voer een score in van 1 tot 5")]
+        public int Score { get; set; }
+        public string Comment { get; set; }
+        public int KlantId { get; set; }
+        public int KaasId { get; set; }
+        public List<Rating> Ratings { get; set; }
     }
 }
