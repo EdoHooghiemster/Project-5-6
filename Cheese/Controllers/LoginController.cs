@@ -28,6 +28,57 @@ namespace Cheese.Controllers
         {   
             return View();
         }
+        public async Task<IActionResult> Accounts()
+        {
+            return View(await _context.Klanten.ToListAsync());
+        }
+        public async Task<IActionResult> AccountsEdit(int? id)
+        {
+            //return View(await _context.Kazen.ToListAsync());
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var login = await _context.Klanten.SingleOrDefaultAsync(m => m.Id == id);
+            if (login == null)
+            {
+                return NotFound();
+            }
+            return View(login);
+        
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AccountsEdit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Confirmwachtwoord,Telnummer,Adres,Activatiecode,Geactiveerd")] Klant klant)
+        {
+            if (id != klant.Id)
+            {
+                return NotFound();
+            }
+
+            // if(ModelState.IsValid){
+                try
+                {
+                    _context.Update(klant);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!KlantExists(klant.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Accounts));
+            // }
+            // return View(klant);
+        }
 
         // GET: Login
         public IActionResult Login()
@@ -126,7 +177,11 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< Updated upstream
         public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Telnummer,Straatnaam,Huisnummer,Postcode")] Klant klant)
+=======
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Confirmwachtwoord,Telnummer,Adres,Activatiecode,Geactiveerd")] Klant klant)
+>>>>>>> Stashed changes
         {
             if (id != klant.Id)
             { 
@@ -144,7 +199,7 @@ namespace Cheese.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KlantExists(klant.Id))
+                    if (!KlantExists(klant.Id)  )
                     {
                         return NotFound();
                     }
@@ -265,6 +320,19 @@ namespace Cheese.Controllers
             {
                 return Redirect("Details/" + TempData["Id"]);
             }
+          
+        }
+        public IActionResult AdminAccountAanpassen() 
+        {
+           return RedirectToAction("Accounts");
+            // if (TempData["Email"].ToString() == "mikekeehnen@me.com")
+            // {
+            //             
+            // }
+            // else
+            // {
+            //     return Redirect("Details/" + TempData["Id"]);
+            // }
           
         }
         public IActionResult LoggedIn()
