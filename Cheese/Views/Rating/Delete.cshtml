@@ -1,16 +1,19 @@
 ﻿@model Cheese.Models.Rating
-
 @{
     ViewData["Title"] = "Delete";
 }
-
 <h2>Delete</h2>
-
 <h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>Rating</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Score)
         </dt>
@@ -24,19 +27,13 @@
             @Html.DisplayFor(model => model.Comment)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.KlantId)
+            @Html.DisplayNameFor(model => model.KaasName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.KlantId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.KaasId)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.KaasId)
+            @Html.DisplayFor(model => model.KaasName)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-default" /> |

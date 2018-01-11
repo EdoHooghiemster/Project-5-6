@@ -53,7 +53,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Score,Comment,KlantId,KaasId")] Rating rating)
+        public async Task<IActionResult> Create([Bind("Id,UserName,Score,Comment,KaasName")] Rating rating)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Score,Comment,KlantId,KaasId")] Rating rating)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Score,Comment,KaasName")] Rating rating)
         {
             if (id != rating.Id)
             {

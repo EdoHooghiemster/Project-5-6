@@ -145,12 +145,12 @@ namespace Cheese.Models
   public class Rating
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Voer een score in van 1 tot 5.")]
+        public string UserName { get; set; }
         [Range(1, 5, ErrorMessage = "Voer een score in van 1 tot 5")]
+        [Required(ErrorMessage = "Voer een score in van 1 tot 5.")]
         public int Score { get; set; }
         public string Comment { get; set; }
-        public int KlantId { get; set; }
-        public int KaasId { get; set; }
+        public string KaasName { get; set; }
         public List<Rating> Ratings { get; set; }
     }
 }
