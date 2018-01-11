@@ -11,8 +11,8 @@ using System;
 namespace Cheese.Migrations
 {
     [DbContext(typeof(CheeseContext))]
-    [Migration("20171218134410_newMigration")]
-    partial class newMigration
+    [Migration("20180111210331_newmodelrating")]
+    partial class newmodelrating
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -151,6 +151,28 @@ namespace Cheese.Migrations
                     b.ToTable("Leveranciers");
                 });
 
+            modelBuilder.Entity("Cheese.Models.Rating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Comment");
+
+                    b.Property<string>("KaasName");
+
+                    b.Property<int?>("RatingId");
+
+                    b.Property<int>("Score");
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RatingId");
+
+                    b.ToTable("Ratings");
+                });
+
             modelBuilder.Entity("Cheese.Models.Wijn", b =>
                 {
                     b.Property<int>("Id")
@@ -222,6 +244,13 @@ namespace Cheese.Migrations
                     b.HasOne("Cheese.Models.Leverancier")
                         .WithMany("Leveranciers")
                         .HasForeignKey("LeverancierId");
+                });
+
+            modelBuilder.Entity("Cheese.Models.Rating", b =>
+                {
+                    b.HasOne("Cheese.Models.Rating")
+                        .WithMany("Ratings")
+                        .HasForeignKey("RatingId");
                 });
 
             modelBuilder.Entity("Cheese.Models.Wijn", b =>
