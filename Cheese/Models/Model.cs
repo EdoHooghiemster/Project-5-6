@@ -34,8 +34,10 @@ namespace Cheese.Models
     public string Merk { get; set; }
     public string Melksoort { get; set; }
     public string Vet { get; set; }
+    [DisplayFormat(DataFormatString = "Yes/No")]
     public bool Biologisch { get; set; }
     public string Kaassoort { get; set; }
+    [DisplayFormat(DataFormatString = "Yes/No")]
     public bool Eetbarekorst { get; set; }
     public string Afkomst { get; set; }
     [DisplayFormat(DataFormatString = "{0:c}")]

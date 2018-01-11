@@ -30,6 +30,7 @@ namespace Cheese.Controllers
 
             return View(await kazen.ToListAsync());
         }
+        
         // GET: Kaas
         public async Task<IActionResult> Admin()
         {

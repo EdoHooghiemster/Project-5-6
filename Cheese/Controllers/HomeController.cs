@@ -99,7 +99,12 @@ namespace Cheese.Controllers
 
             return View();
         }
+        public IActionResult Grafieken()
+        {
+            
 
+            return View();
+        }
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

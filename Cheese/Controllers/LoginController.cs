@@ -177,11 +177,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-<<<<<<< Updated upstream
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Telnummer,Straatnaam,Huisnummer,Postcode")] Klant klant)
-=======
         public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Confirmwachtwoord,Telnummer,Adres,Activatiecode,Geactiveerd")] Klant klant)
->>>>>>> Stashed changes
         {
             if (id != klant.Id)
             { 
