@@ -56,7 +56,7 @@
   <div class="row"> 
       <!-- BEGIN PRODUCTS --> 
       @foreach (var item in Model) { 
-		  @if(item.Prijs <= 10){
+		  @if(item.Prijs == 5.00 , 3.00 , 6.75){
   
   
       <div class="col-md-3 col-sm-6"> 
@@ -80,7 +80,7 @@
             <div class="row"> 
               <div class="col-md-6 col-sm-6"> 
                  
-                <p class="price">€ @Html.DisplayFor(modelItem => item.Prijs),-</p>
+                <p class="price">@Html.DisplayFor(modelItem => item.Prijs)</p>
               </div> 
               <div class="col-md-6 col-sm-6"> 
                 <a asp-area="" asp-controller="Kaas" asp-action="Winkelwagen"><button class="btn btn-success right" >Winkelwagen</button></a> 
@@ -100,7 +100,7 @@
   <div class="row"> 
       <!-- BEGIN PRODUCTS --> 
       @foreach (var item in Model) { 
-		  @if(item.Prijs<= 10){
+		  @if(item.Prijs == 4.99 , 2.99 , 6.99){
   
       <div class="col-md-3 col-sm-6"> 
         <span class="thumbnail"> 
