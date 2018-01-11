@@ -11,9 +11,10 @@ using System;
 namespace Cheese.Migrations
 {
     [DbContext(typeof(CheeseContext))]
-    partial class CheeseContextModelSnapshot : ModelSnapshot
+    [Migration("20180111165716_favorites")]
+    partial class favorites
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,8 +57,6 @@ namespace Cheese.Migrations
                     b.Property<bool>("Biologisch");
 
                     b.Property<bool>("Eetbarekorst");
-
-                    b.Property<bool>("Favorieten");
 
                     b.Property<int?>("KaasId");
 
@@ -237,7 +236,7 @@ namespace Cheese.Migrations
                         .HasForeignKey("KaasId");
 
                     b.HasOne("Cheese.Models.Klant")
-                        .WithMany("Kaas")
+                        .WithMany("Favoriet")
                         .HasForeignKey("KlantId");
                 });
 

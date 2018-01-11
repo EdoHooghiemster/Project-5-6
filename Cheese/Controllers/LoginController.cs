@@ -51,7 +51,7 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AccountsEdit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Confirmwachtwoord,Telnummer,Adres,Activatiecode,Geactiveerd")] Klant klant)
+        public async Task<IActionResult> AccountsEdit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Confirmwachtwoord,Telnummer,Huisnummer,Straatnaam,Postcode,Activatiecode,Geactiveerd")] Klant klant)
         {
             if (id != klant.Id)
             {
@@ -119,6 +119,7 @@ namespace Cheese.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 Guid activationCode = Guid.NewGuid();
                 if (_context.Klanten.Where(u => u.Email == klant.Email).Any())
                 {
@@ -142,6 +143,8 @@ namespace Cheese.Controllers
                         Postcode = klant.Postcode, 
                         ActivatieCode = activationCode,
                         Geactiveerd = "Nee"
+                      
+                      
                     };
 
                 SendActivationEmail(klant, activationCode);
@@ -177,7 +180,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,Confirmwachtwoord,Telnummer,Adres,Activatiecode,Geactiveerd")] Klant klant)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Voornaam,Achternaam,Geslacht,Geboortedatum,Email,Wachtwoord,confirmWachtwoord,Telnummer,Huisnummer,Straatnaam,Postcode,Geactiveerd")] Klant klant)
         {
             if (id != klant.Id)
             { 
@@ -271,6 +274,7 @@ namespace Cheese.Controllers
                     TempData["Geslacht"] = usr.Geslacht.ToString();
                     TempData["Telnummer"] = usr.Telnummer.ToString();
                     TempData["Geactiveerd"] = usr.Geactiveerd.ToString();
+                  
                     TempData.Keep("Email");
                     TempData.Keep("Wachtwoord");
                     TempData.Keep("Id");
@@ -304,7 +308,10 @@ namespace Cheese.Controllers
               
         }
       
-
+        public IActionResult Favorieten()
+        {
+            return View();
+        }
         public IActionResult Admin() 
         {
            

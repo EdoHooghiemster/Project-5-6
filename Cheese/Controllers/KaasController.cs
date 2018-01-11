@@ -36,7 +36,8 @@ namespace Cheese.Controllers
         {
             return View(await _context.Kazen.ToListAsync());
         }
-        
+
+      
          public async Task<IActionResult> Product(int? id)
         {
             //return View(await _context.Kazen.ToListAsync());
@@ -56,7 +57,7 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Product(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal")] Kaas kaas)
+        public async Task<IActionResult> Product(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
@@ -80,10 +81,13 @@ namespace Cheese.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Winkelwagen));
+                
+                return RedirectToAction(nameof(Product));
             }
             return View(kaas);
         }
+
+
         public async Task<IActionResult> Verwijderen(int? id)
         {
             //return View(await _context.Kazen.ToListAsync());
@@ -103,7 +107,7 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Verwijderen(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal")] Kaas kaas)
+        public async Task<IActionResult> Verwijderen(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
@@ -132,6 +136,55 @@ namespace Cheese.Controllers
             return View(kaas);
         }
 
+
+
+        public async Task<IActionResult> Verwijderen2(int? id)
+        {
+            //return View(await _context.Kazen.ToListAsync());
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var kaas = await _context.Kazen.SingleOrDefaultAsync(m => m.Id == id);
+            if (kaas == null)
+            {
+                return NotFound();
+            }
+            return View(kaas);
+        
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Verwijderen2(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten")] Kaas kaas)
+        {
+            if (id != kaas.Id)
+            {
+                return NotFound();
+            }
+
+            if(ModelState.IsValid){
+                try
+                {
+                    _context.Update(kaas);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!KaasExists(kaas.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Favorieten));
+            }
+            return View(kaas);
+        }
         public async Task<IActionResult> Producten(string searchString)
         {
             var kazen = from m in _context.Kazen
@@ -151,6 +204,16 @@ namespace Cheese.Controllers
                 select m;
 
             kazen = kazen.Where(s=>s.Winkelwagen.Equals(true));
+
+            return View(await kazen.ToListAsync());
+        }
+
+         public async Task<IActionResult> Favorieten()
+        {
+            var kazen = from m in _context.Kazen
+                select m;
+
+            kazen = kazen.Where(s=>s.Favorieten.Equals(true));
 
             return View(await kazen.ToListAsync());
         }
@@ -210,7 +273,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving")] Kaas kaas)
+        public async Task<IActionResult> Create([Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,KlantId")] Kaas kaas)
         {
             if (ModelState.IsValid)
             {
@@ -236,6 +299,9 @@ namespace Cheese.Controllers
             }
             return View(kaas);
         }
+
+       
+
 
         // POST: Kaas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
