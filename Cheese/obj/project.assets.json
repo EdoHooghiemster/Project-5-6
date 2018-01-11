@@ -7993,7 +7993,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
@@ -13188,33 +13188,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rogie\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/mikekeehnen/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\Cheese.csproj",
+      "projectUniqueName": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
       "projectName": "Cheese",
-      "projectPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\Cheese.csproj",
-      "packagesPath": "C:\\Users\\rogie\\.nuget\\packages\\",
-      "outputPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\obj\\",
+      "projectPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
+      "packagesPath": "/Users/mikekeehnen/.nuget/packages/",
+      "outputPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rogie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/mikekeehnen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13231,11 +13226,12 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Npgsql.EntityFrameworkCore.PostgreSQL": {
+          "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "2.0.0",
+            "autoReferenced": true
           },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "2.0.0"
           },
@@ -13243,20 +13239,15 @@
             "target": "Package",
             "version": "2.0.0"
           },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
-          "System.Composition": {
-            "target": "Package",
-            "version": "1.0.31"
-          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "2.0.1"
           },
-          "Microsoft.AspNetCore.All": {
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "10.0.3"
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "2.0.0"
           },
@@ -13265,9 +13256,13 @@
             "target": "Package",
             "version": "1.0.30"
           },
-          "Newtonsoft.Json": {
+          "System.Composition": {
             "target": "Package",
-            "version": "10.0.3"
+            "version": "1.0.31"
+          },
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "target": "Package",
+            "version": "2.0.0"
           }
         },
         "imports": [

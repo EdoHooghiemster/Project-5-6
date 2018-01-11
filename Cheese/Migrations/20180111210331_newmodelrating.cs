@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Cheese.Migrations
 {
-    public partial class newMigration : Migration
+    public partial class newmodelrating : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -112,6 +112,29 @@ namespace Cheese.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Ratings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Comment = table.Column<string>(nullable: true),
+                    KaasName = table.Column<string>(nullable: true),
+                    RatingId = table.Column<int>(nullable: true),
+                    Score = table.Column<int>(nullable: false),
+                    UserName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ratings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Ratings_Ratings_RatingId",
+                        column: x => x.RatingId,
+                        principalTable: "Ratings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Wijnen",
                 columns: table => new
                 {
@@ -177,6 +200,11 @@ namespace Cheese.Migrations
                 column: "LeverancierId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Ratings_RatingId",
+                table: "Ratings",
+                column: "RatingId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Wijnen_WijnId",
                 table: "Wijnen",
                 column: "WijnId");
@@ -200,6 +228,9 @@ namespace Cheese.Migrations
 
             migrationBuilder.DropTable(
                 name: "Leveranciers");
+
+            migrationBuilder.DropTable(
+                name: "Ratings");
 
             migrationBuilder.DropTable(
                 name: "Wijnen");
