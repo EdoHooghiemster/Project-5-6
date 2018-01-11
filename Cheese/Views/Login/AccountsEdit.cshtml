@@ -10,7 +10,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="AccountsEdit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Voornaam" class="control-label"></label>
@@ -67,32 +67,22 @@
                 <span asp-validation-for="Telnummer" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Straatnaam" class="control-label"></label> 
-                <input asp-for="Straatnaam" class="form-control" /> 
-                <span asp-validation-for="Straatnaam" class="text-danger"></span> 
-            </div> 
-            <div class="form-group"> 
-                <label asp-for="Huisnummer" class="control-label"></label> 
-                <input asp-for="Huisnummer" class="form-control" /> 
-                <span asp-validation-for="Huisnummer" class="text-danger"></span> 
-            </div> 
-            <div class="form-group"> 
-                <label asp-for="Postcode" class="control-label"></label> 
-                <input asp-for="Postcode" class="form-control" /> 
-                <span asp-validation-for="Postcode" class="text-danger"></span> 
+                <label asp-for="Adres" class="control-label"></label>
+                <input asp-for="Adres" class="form-control" />
+                <span asp-validation-for="Adres" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-            <div class="form-group">
-                <div class="password">
                 <label  asp-for="Wachtwoord" class="control-label" ></label>
                 <input asp-for="Wachtwoord" class="form-control" />
                 <span asp-validation-for="Wachtwoord" class="text-danger" ></span>
+            </div>
+            <div class="form-group">
                 <label  asp-for="Geactiveerd" class="control-label" ></label>
                 <input asp-for="Geactiveerd" class="form-control" />
                 <span asp-validation-for="Geactiveerd" class="text-danger" ></span>
-                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
     </div>
