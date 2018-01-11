@@ -26477,23 +26477,24 @@
     ]
   },
   "packageFolders": {
-    "/Users/mikekeehnen/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\rogie\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
+      "projectUniqueName": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\Cheese.csproj",
       "projectName": "Cheese",
-      "projectPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
-      "packagesPath": "/Users/mikekeehnen/.nuget/packages/",
-      "outputPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/obj/",
+      "projectPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\Cheese.csproj",
+      "packagesPath": "C:\\Users\\rogie\\.nuget\\packages\\",
+      "outputPath": "D:\\Rogier\\Documenten\\Project-5-6\\Cheese\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/mikekeehnen/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\rogie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -26528,15 +26529,20 @@
             "target": "Package",
             "version": "2.0.0"
           },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
+          },
+          "System.Composition": {
+            "target": "Package",
+            "version": "1.0.31"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "2.0.1"
           },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "10.0.3"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "2.0.0"
           },
@@ -26576,3 +26582,19 @@
   ]
 >>>>>>> master
 }
+    "/Users/mikekeehnen/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+      "projectUniqueName": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
+      "projectPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/Cheese.csproj",
+      "packagesPath": "/Users/mikekeehnen/.nuget/packages/",
+      "outputPath": "/Users/mikekeehnen/Projects/Project-5-6/Cheese/obj/",
+        "/Users/mikekeehnen/.nuget/NuGet/NuGet.Config"
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "2.0.1"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "10.0.3"
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
