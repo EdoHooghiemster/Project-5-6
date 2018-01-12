@@ -26,8 +26,8 @@ namespace Cheese
 
         //Add this line to your method
         services.AddDbContext<CheeseContext> (
-        opt => opt.UseSqlServer(@"Server=tcp:cheesedb.database.windows.net,1433;Initial Catalog=CheeseDB;Persist Security Info=False;User ID=CheeseAdmin;Password=Ikbenadmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30"));
-        // opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=Admin221"));
+        // opt => opt.UseSqlServer(@"Server=tcp:cheesedb.database.windows.net,1433;Initial Catalog=CheeseDB;Persist Security Info=False;User ID=CheeseAdmin;Password=Ikbenadmin!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30"));
+        opt => opt.UseNpgsql(@"Host=localhost;Database=CheeseDB;Username=postgres;Password=Admin221"));
  
             // services.AddDbContext<CheeseContext> (
             //         using (var connection = new QC.SqlConnection(  
