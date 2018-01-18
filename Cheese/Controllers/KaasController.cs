@@ -57,7 +57,7 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Product(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten")] Kaas kaas)
+        public async Task<IActionResult> Product(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten,Voorraad")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
@@ -107,7 +107,7 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Verwijderen(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten")] Kaas kaas)
+        public async Task<IActionResult> Verwijderen(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten,Voorraad")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
@@ -157,7 +157,7 @@ namespace Cheese.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Verwijderen2(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten")] Kaas kaas)
+        public async Task<IActionResult> Verwijderen2(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Winkelwagen,Aantal,Favorieten,Voorraad")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
@@ -308,7 +308,7 @@ namespace Cheese.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Winkelwagen,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Aantal")] Kaas kaas)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Naam,Merk,Melksoort,Vet,Biologisch,Winkelwagen,Kaassoort,Eetbarekorst,Afkomst,Prijs,Afbeelding,Beschrijving,Aantal,Voorraad")] Kaas kaas)
         {
             if (id != kaas.Id)
             {
