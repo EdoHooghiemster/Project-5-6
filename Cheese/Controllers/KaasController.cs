@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Cheese.Models;
+using System.Data.SqlClient;
+
 
 namespace Cheese.Controllers
 {
@@ -371,5 +373,33 @@ namespace Cheese.Controllers
         {
             return _context.Kazen.Any(e => e.Id == id);
         }
+
+        public IActionResult Grafieken()
+       {
+            var jonge = (from m in _context.Kazen where m.Kaassoort == "Jonge kaas"
+                select m);
+            var harde = (from m in _context.Kazen where m.Kaassoort == "Harde kaas"
+                select m);
+            var Geitenkaas = (from m in _context.Kazen where m.Kaassoort == "Geitenkaas"
+                select m);
+            var Witte = (from m in _context.Kazen where m.Kaassoort == "Witte kaas"
+                select m);
+            var Schimmel = (from m in _context.Kazen where m.Kaassoort == "Schimmelkaas"
+                select m);
+            var Oude = (from m in _context.Kazen where m.Kaassoort == "Oude kaas"
+                select m); 
+            var Zachte = (from m in _context.Kazen where m.Kaassoort == "Zachte kaas"
+                select m);   
+            ViewBag.Jongekaas = jonge.Count();
+            ViewBag.Hardekaas = harde.Count();
+            ViewBag.Geitenkaas = Geitenkaas.Count();
+            ViewBag.Witte = Witte.Count();
+            ViewBag.Schimmel = Schimmel.Count();
+            ViewBag.Oude = Oude.Count();
+            ViewBag.Zachte = Zachte.Count();
+            return View();
+        }
+
+
     }
 }

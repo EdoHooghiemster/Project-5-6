@@ -1,0 +1,56 @@
+@model IEnumerable<Cheese.Models.Kaas>
+
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <title>Pie Chart</title>
+</head>
+<body>
+  
+    <div id="chartContainer"></div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: "Totaal aantal verschillende kaassoorten"
+                },
+                animationEnabled: true,
+                legend: {
+                    verticalAlign: "center",
+                    horizontalAlign: "left",
+                    fontSize: 20,
+                    fontFamily: "Helvetica"
+                },
+                theme: "theme2",
+                data: [
+                {
+                    type: "pie",
+                    indexLabelFontFamily: "Garamond",
+                    indexLabelFontSize: 20,
+                    indexLabel: "{label} {y}",
+                    startAngle: -20,
+                    showInLegend: true,
+                    toolTipContent: "{legendText} {y}",
+                    dataPoints: [
+                        { y: @ViewBag.Jongekaas, legendText: "Jonge kaas", label: "Jonge kaas" },
+                        { y: @ViewBag.HardeKaas, legendText: "Harde kaas", label: "Harde kaas" },
+                        { y: @ViewBag.Geitenkaas, legendText: "Geitenkaas", label: "Geitenkaas" },
+                        { y: @ViewBag.Witte, legendText: "Witte kaas", label: "Witte kaas" },
+                        { y: @ViewBag.Schimmel, legendText: "Schimmelkaas", label: "Schimmelkaas" },
+                        { y: @ViewBag.Oude, legendText: "Oude kaas", label: "Oude kaas" },
+                        { y: @ViewBag.Zachte, legendText: "Zachte kaas", label: "Zachte kaas" },
+                        
+                      
+                    ]
+                }
+                ]
+            });
+            chart.render();
+        };
+    </script>
+ 
+</body>
+</html>			

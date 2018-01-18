@@ -98,9 +98,11 @@
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a asp-area="" asp-controller="Login" asp-action="LoggedIn"style="font-size:20px">Mijn Gegevens</a></li>
                                         <li><a asp-area="" asp-controller="Kaas" asp-action="Favorieten"style="font-size:20px">Favorieten</a></li>
-                                        @if(@TempData["Email"].ToString() == "0938856@hr.nl") {
+                                        @if(@TempData["Email"].ToString() == "0931317@hr.nl") {
                                             <li><a asp-area="" asp-controller="Login" asp-action="AdminAccountAanpassen" style="font-size:20px">Andere accounts aanpassen</a></li>
                                             <li><a asp-area="" asp-controller="Kaas" asp-action="Admin"style="font-size:20px">Kazen aanpassen</a></li>
+                                            <li><a asp-area="" asp-controller="Kaas" asp-action="Grafieken"style="font-size:20px">Info</a></li>
+
                                         }
                                         <li class="divider"></li>
                                     <li><a asp-area="" asp-controller="Login" asp-action="LogUit"style="font-size:20px">Uitloggen</a></li>
