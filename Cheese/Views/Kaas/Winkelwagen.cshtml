@@ -97,6 +97,10 @@
                 @(item.Prijs * item.Aantal)
             </td>
             <td>
+                @(item.Voorraad - item.Aantal)
+                
+            </td>      
+            <td>
                 <a asp-action="Product" asp-route-id="@item.Id">Aantal aanpassen</a><br>
                 <a asp-action="Verwijderen" asp-route-id="@item.Id">Verwijderen</a>
             </td>

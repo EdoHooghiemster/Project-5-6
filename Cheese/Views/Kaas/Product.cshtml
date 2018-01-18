@@ -90,6 +90,11 @@
                             <span asp-validation-for="Prijs" class="text-danger"></span>
                         </div>
                         <div class="form-group">
+                            <label asp-for="Voorraad" class="control-label"></label>
+                            <input asp-for="Voorraad" class="form-control" />
+                            <span asp-validation-for="Voorraad" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
                             <label asp-for="Afbeelding" class="control-label"></label>
                             <input asp-for="Afbeelding" class="form-control" readonly/>
                             <span asp-validation-for="Afbeelding" class="text-danger"></span>
@@ -168,6 +173,12 @@
                         @Html.DisplayFor(model => model.Prijs)
                     </dd>
                     <dt>
+                        @Html.DisplayNameFor(model => model.Voorraad)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Voorraad)
+                    </dd>
+                    <dt>
                         @Html.DisplayNameFor(model => model.Beschrijving)
                     </dt>
                     <dd>
@@ -241,6 +252,11 @@
                             <span asp-validation-for="Prijs" class="text-danger"></span>
                         </div>
                         <div class="form-group">
+                            <label asp-for="Voorraad" class="control-label"></label>
+                            <input asp-for="Voorraad" class="form-control" />
+                            <span asp-validation-for="Voorraad" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
                             <label asp-for="Afbeelding" class="control-label"></label>
                             <input asp-for="Afbeelding" class="form-control" readonly/>
                             <span asp-validation-for="Afbeelding" class="text-danger"></span>
@@ -250,6 +266,7 @@
                             <input asp-for="Beschrijving" class="form-control" readonly/>
                             <span asp-validation-for="Beschrijving" class="text-danger"></span>
                         </div>
+                        
                     </div>
                     @if(Model.Winkelwagen){
                         <div class="form-group">
@@ -334,6 +351,11 @@
                             <span asp-validation-for="Prijs" class="text-danger"></span>
                         </div>
                         <div class="form-group">
+                            <label asp-for="Voorraad" class="control-label"></label>
+                            <input asp-for="Voorraad" class="form-control" />
+                            <span asp-validation-for="Voorraad" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
                             <label asp-for="Afbeelding" class="control-label"></label>
                             <input asp-for="Afbeelding" class="form-control" readonly/>
                             <span asp-validation-for="Afbeelding" class="text-danger"></span>
@@ -353,7 +375,7 @@
                 </form>
 
                 
-               
+             
     </div>
 </div>
 @section Scripts {
