@@ -13,7 +13,7 @@ namespace Cheese.Models
     public DbSet<Bestelling> Bestellingen { get; set; }
     public DbSet<Leverancier> Leveranciers { get; set; } 
     public DbSet<Winkelwagen> Winkelwagens { get; set; }
-    public DbSet<Rating> Ratings { get; set; }
+    public DbSet<Rating> Ratings {get; set;}
     
     //this method is run automatically by EF the first time we run the application
      public CheeseContext(DbContextOptions<CheeseContext> options): base(options)
@@ -34,8 +34,10 @@ namespace Cheese.Models
     public string Merk { get; set; }
     public string Melksoort { get; set; }
     public string Vet { get; set; }
+    [DisplayFormat(DataFormatString = "Yes/No")]
     public bool Biologisch { get; set; }
     public string Kaassoort { get; set; }
+    [DisplayFormat(DataFormatString = "Yes/No")]
     public bool Eetbarekorst { get; set; }
     public string Afkomst { get; set; }
     [DisplayFormat(DataFormatString = "{0:c}")]
@@ -45,8 +47,10 @@ namespace Cheese.Models
     public List<Kaas> Kazen { get; set; }
     public bool Winkelwagen { get; set; }
     [Range(0.0, 100000000 , ErrorMessage = "U kan geen negatief aantal in uw winkelwagen plaatsen")]
+    public bool Favorieten {get; set;}
     public int Aantal { get; set; }
 
+    
   }
 
   public class Wijn
@@ -82,12 +86,12 @@ namespace Cheese.Models
        [RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3]\.)|(([\w-]+\.)+))([a-zA-Z{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Voer een juiste e-mail in.")]
       public string Email { get; set; }
     
-     
+     [DataType(DataType.Password)]
      [Required(ErrorMessage = "Wachtwoord is nodig")]
      [StringLength(20,MinimumLength = 0, ErrorMessage = "Wachtwoord mag maximaal 20 karakters lang zijn")]
       public string Wachtwoord{get; set;}
 
-    
+     [DataType(DataType.Password)]
     [Compare("Wachtwoord", ErrorMessage = "Wachtwoord komt niet overeen.")]
     public string confirmWachtwoord { get; set; }
 
@@ -107,6 +111,7 @@ namespace Cheese.Models
       public Guid ActivatieCode { get; set; }
 
       public string Geactiveerd { get; set; }
+
    
       public List<Klant> Klanten { get; set; }
   }
@@ -140,15 +145,15 @@ namespace Cheese.Models
 
     }
 
-    public class Rating
+  public class Rating
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Voer een score in van 1 tot 5.")]
+        public string UserName { get; set; }
         [Range(1, 5, ErrorMessage = "Voer een score in van 1 tot 5")]
+        [Required(ErrorMessage = "Voer een score in van 1 tot 5.")]
         public int Score { get; set; }
         public string Comment { get; set; }
-        public int KlantId { get; set; }
-        public int KaasId { get; set; }
+        public string KaasName { get; set; }
         public List<Rating> Ratings { get; set; }
     }
 }

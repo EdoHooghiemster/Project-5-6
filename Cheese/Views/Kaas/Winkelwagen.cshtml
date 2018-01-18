@@ -55,6 +55,14 @@
     ViewData["Title"] = "Winkelwagen";
 }
 
+@{float totaal = 0; }
+
+@{foreach (var Item in Model)
+    {
+        totaal = totaal + Item.Prijs*Item.Aantal;
+    }
+}
+
 <h2>Winkelwagen</h2>
 
 <table class="table">
@@ -73,9 +81,6 @@
         </tr>
     </thead>
     <tbody>
-<script>
-    var totaal = 0;
-</script>
 @foreach (var item in Model) {
     if(item.Winkelwagen == true){
         <tr>
@@ -90,10 +95,6 @@
             </td>
             <td>
                 @(item.Prijs * item.Aantal)
-                <p id="hoi"></p>
-                <script>
-                    totaal += '@Html.Raw(item.Prijs)' * '@Html.Raw(item.Aantal)';
-                </script>
             </td>
             <td>
                 <a asp-action="Product" asp-route-id="@item.Id">Aantal aanpassen</a><br>
@@ -108,10 +109,7 @@
                 <b>Totaalprijs</b>
             </td>
             <td>
-                <b id="Totaalprijs"></b>
-                <script>
-                    document.getElementById("Totaalprijs").innerHTML=totaal;
-                </script>
+                <b>@totaal</b>
             </td>
             <td></td>
         </tr>
@@ -119,3 +117,13 @@
         
     </tbody>
 </table>
+
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="business" value="cheesewitheasepayments@gmail.com">
+<input type="hidden" name="item_name_1" value="Uw Producten">
+<input type="hidden" name="amount_1" value="@totaal">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="submit" value="Betalen met PayPal">
+</form>

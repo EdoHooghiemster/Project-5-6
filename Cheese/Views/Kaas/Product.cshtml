@@ -20,6 +20,101 @@
         <div class="panel-body">
             <div class="media">
                 <div class="media-left">
+
+                     <form asp-action = "Product">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">    
+                        <div class = "password">
+                            <div class="checkbox">
+                                <label>
+                                    <input asp-for="Favorieten" checked="checked"/> @Html.DisplayNameFor(model => model.Favorieten)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                     <div class = "password">
+                       <div class="form-group" style="width:10%">
+                        <label asp-for="Aantal" class="control-label"></label>
+                        <input asp-for="Aantal" class="form-control"/>
+                        <span asp-validation-for="Aantal" class="text-danger"></span>
+                    </div>
+                   
+                        <div class="form-group">
+                            <label asp-for="Naam" class="control-label"></label>
+                            <input asp-for="Naam" class="form-control" readonly/>
+                            <span asp-validation-for="Naam" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Merk" class="control-label"></label>
+                            <input asp-for="Merk" class="form-control" readonly/>
+                            <span asp-validation-for="Merk" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Melksoort" class="control-label"></label>
+                            <input asp-for="Melksoort" class="form-control" readonly />
+                            <span asp-validation-for="Melksoort" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Vet" class="control-label"></label>
+                            <input asp-for="Vet" class="form-control" readonly/>
+                            <span asp-validation-for="Vet" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input asp-for="Biologisch" disabled="disabled" /> @Html.DisplayNameFor(model => model.Biologisch)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Kaassoort" class="control-label"></label>
+                            <input asp-for="Kaassoort" class="form-control" readonly/>
+                            <span asp-validation-for="Kaassoort" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input asp-for="Eetbarekorst" disabled="disabled"/> @Html.DisplayNameFor(model => model.Eetbarekorst)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Afkomst" class="control-label"></label>
+                            <input asp-for="Afkomst" class="form-control" readonly/>
+                            <span asp-validation-for="Afkomst" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Prijs" class="control-label"></label>
+                            <input asp-for="Prijs" class="form-control" readonly/>
+                            <span asp-validation-for="Prijs" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Afbeelding" class="control-label"></label>
+                            <input asp-for="Afbeelding" class="form-control" readonly/>
+                            <span asp-validation-for="Afbeelding" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Beschrijving" class="control-label"></label>
+                            <input asp-for="Beschrijving" class="form-control" readonly/>
+                            <span asp-validation-for="Beschrijving" class="text-danger"></span>
+                        </div>
+                    </div>
+                     @if(Model.Favorieten){
+                        <div class="form-group">
+                            <input type="submit" value="Toegevoegd aan Favorieten" class="btn btn-success" />
+                        </div>
+                    }else{ 
+                        
+                        <div class="form-group">
+                            <input type="submit" value="Toevoegen aan Favorieten" class="btn btn-danger" />
+                        </div>
+                    }
+
+                    
+                    </form>
+
+               
                     <img src=@Html.DisplayFor(model => model.Afbeelding) alt="..." height="312.5" width="250">
                 </div>
                 <div class="media-body">
@@ -92,7 +187,7 @@
                     </div>
                     <div class="form-group" style="width:10%">
                         <label asp-for="Aantal" class="control-label"></label>
-                        <input asp-for="Aantal" class="form-control"/>
+                        <input asp-for="Aantal" class=" form-control"/>
                         <span asp-validation-for="Aantal" class="text-danger"></span>
                     </div>
                     <div class = "password">
@@ -159,15 +254,106 @@
                     @if(Model.Winkelwagen){
                         <div class="form-group">
                             <input type="submit" value="Aantal aanpassen" class="btn btn-default" />
+                            <h6>Toegevoegd aan winkelwagen!</h6>
                         </div>
                     }else{
                         <div class="form-group">
                             <input type="submit" value="Toevoegen aan winkelwagen" class="btn btn-default" />
                         </div>
                     }
+                      
                 </div>
-                <button asp-controller="Rating" asp-action="Create" style="font-size:20px">Beoordelingen</button>
+                <button asp-controller="Rating" asp-action="Create" style="font-size:20px">Schrijf een beoordeling</button>
+                <button asp-controller="Rating" asp-action="Rating" style="font-size:20px">Bekijk beoordelingen</button>
                 </form>
+
+                
+                <!-- Voor favorieten  -->
+
+                <form asp-action = "Favoriet">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">    
+                        <div class = "password">
+                            <div class="checkbox">
+                                <label>
+                                    <input asp-for="Favorieten" checked="checked"/> @Html.DisplayNameFor(model => model.Favorieten)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class = "password">
+                        <div class="form-group">
+                            <label asp-for="Naam" class="control-label"></label>
+                            <input asp-for="Naam" class="form-control" readonly/>
+                            <span asp-validation-for="Naam" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Merk" class="control-label"></label>
+                            <input asp-for="Merk" class="form-control" readonly/>
+                            <span asp-validation-for="Merk" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Melksoort" class="control-label"></label>
+                            <input asp-for="Melksoort" class="form-control" readonly />
+                            <span asp-validation-for="Melksoort" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Vet" class="control-label"></label>
+                            <input asp-for="Vet" class="form-control" readonly/>
+                            <span asp-validation-for="Vet" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input asp-for="Biologisch" disabled="disabled" /> @Html.DisplayNameFor(model => model.Biologisch)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Kaassoort" class="control-label"></label>
+                            <input asp-for="Kaassoort" class="form-control" readonly/>
+                            <span asp-validation-for="Kaassoort" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input asp-for="Eetbarekorst" disabled="disabled"/> @Html.DisplayNameFor(model => model.Eetbarekorst)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Afkomst" class="control-label"></label>
+                            <input asp-for="Afkomst" class="form-control" readonly/>
+                            <span asp-validation-for="Afkomst" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Prijs" class="control-label"></label>
+                            <input asp-for="Prijs" class="form-control" readonly/>
+                            <span asp-validation-for="Prijs" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Afbeelding" class="control-label"></label>
+                            <input asp-for="Afbeelding" class="form-control" readonly/>
+                            <span asp-validation-for="Afbeelding" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Beschrijving" class="control-label"></label>
+                            <input asp-for="Beschrijving" class="form-control" readonly/>
+                            <span asp-validation-for="Beschrijving" class="text-danger"></span>
+                            
+                        </div>       
+                         
+                    </div>
+           
+               
+                  
+                </div>
+                </form>
+
+                
+               
     </div>
 </div>
 @section Scripts {

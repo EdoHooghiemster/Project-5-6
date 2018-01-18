@@ -1,15 +1,18 @@
 ﻿@model Cheese.Models.Rating
-
 @{
     ViewData["Title"] = "Details";
 }
-
 <h2>Details</h2>
-
 <div>
     <h4>Rating</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Score)
         </dt>
@@ -23,16 +26,10 @@
             @Html.DisplayFor(model => model.Comment)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.KlantId)
+            @Html.DisplayNameFor(model => model.KaasName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.KlantId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.KaasId)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.KaasId)
+            @Html.DisplayFor(model => model.KaasName)
         </dd>
     </dl>
 </div>

@@ -29,8 +29,7 @@ namespace Cheese
                     Console.WriteLine("Press any key to finish...");  
                     Console.ReadKey(true);  
                 }  
-            
-            
+   
         }
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
