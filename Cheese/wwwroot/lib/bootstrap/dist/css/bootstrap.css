@@ -16,6 +16,11 @@ font-size: 30px;
   margin: 0 auto;
   color: #333;
 }
+.prijs{
+  font-size: 30px;
+  margin: 0 auto;
+  color: #333;
+}
 .right{
 float:right;
 border-bottom: 2px solid transparent;
