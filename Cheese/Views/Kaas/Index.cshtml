@@ -13,7 +13,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         @foreach (var item in Model) { 
-		    @if(item.Id == 1){
+		    @if(item.Id == 3){
                    <div class="item active">
                         <a asp-action="Product" asp-route-id="@item.Id"><img src=@Html.DisplayFor(modelItem => item.Afbeelding) alt="..."/></a>
                         <div class="carousel-caption">
@@ -21,14 +21,14 @@
                         </div>
                     </div>
             }
-                @if(item.Id == 2){
+                @if(item.Id == 8){
                    <div class="item">
                         <a asp-action="Product" asp-route-id="@item.Id"><img src=@Html.DisplayFor(modelItem => item.Afbeelding) alt="..."/></a>
                         <div class="carousel-caption">
                             <h2 style="color:#73e64c">@Html.DisplayFor(modelItem=> item.Naam)</h2>
                         </div>
                     </div>
-            } @if(item.Id == 3){
+            } @if(item.Id == 9){
                    <div class="item">
                         <a asp-action="Product" asp-route-id="@item.Id"><img src=@Html.DisplayFor(modelItem => item.Afbeelding) alt="..."/></a>
                         <div class="carousel-caption">
