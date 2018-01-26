@@ -48,6 +48,7 @@ namespace Cheese.Models
     public bool Winkelwagen { get; set; }
     [Range(0.0, 100000000 , ErrorMessage = "U kan geen negatief aantal in uw winkelwagen plaatsen")]
     public bool Favorieten {get; set;}
+    [Range(0.0, 100000000 , ErrorMessage = "U kan geen negatief aantal in uw winkelwagen plaatsen")]
     public int Aantal { get; set; }
     public int Voorraad{get; set;}
 
